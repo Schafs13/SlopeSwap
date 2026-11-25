@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 420">
+  <defs>
+    <linearGradient id="bg" x2="0" y2="1">
+      <stop stop-color="#d9edf2"/>
+      <stop offset="1" stop-color="#f9fcfd"/>
+    </linearGradient>
+    <linearGradient id="lens" x2="1" y2="1">
+      <stop stop-color="#8dd7df"/>
+      <stop offset=".5" stop-color="#318ca6"/>
+      <stop offset="1" stop-color="#173f5b"/>
+    </linearGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="170%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="7"/>
+      <feOffset dy="7"/>
+      <feComponentTransfer><feFuncA type="linear" slope=".2"/></feComponentTransfer>
+      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="640" height="420" rx="24" fill="url(#bg)"/>
+  <path d="M0 322c130-38 244-24 343 9s197 24 297-10v99H0z" fill="#e7f2f4"/>
+  <ellipse cx="324" cy="345" rx="195" ry="15" fill="#91b4bf" opacity=".3"/>
+  <g filter="url(#shadow)">
+    <g transform="rotate(-8 260 220)">
+      <path d="M78 148c25-25 63-38 109-38h113c46 0 84 13 109 38l-15 75c-4 21-22 35-45 35H138c-23 0-41-14-45-35z" fill="#173642"/>
+      <path d="M101 158c22-17 49-25 87-25h113c38 0 65 8 87 25l-12 57c-3 14-13 22-29 22H142c-16 0-26-8-29-22z" fill="url(#lens)"/>
+      <path d="M242 135v100" stroke="#173642" stroke-width="11"/>
+      <path d="M104 158l-39-15M396 158l39-15" stroke="#ef805d" stroke-width="13" stroke-linecap="round"/>
+    </g>
+    <g transform="translate(45 0)">
+      <path d="M346 200c-5-23-1-42 12-55 8-8 20-6 24 4l8 24 10-56c3-14 21-13 22 2l1 44 12-43c4-13 21-9 20 5l-3 47 15-34c5-12 21-5 17 8l-17 64c-4 17-18 29-37 34l-15 4c-36 9-63-7-69-37z" fill="#ef805d" stroke="#173642" stroke-width="5" stroke-linejoin="round"/>
+      <path d="M373 252v32c17 16 43 23 69 16l17-5v-37" fill="#d96849" stroke="#173642" stroke-width="5"/>
+      <path d="M366 280c25 15 56 18 86 8l14 22c-31 16-70 14-103-3z" fill="#17647a" stroke="#173642" stroke-width="5"/>
+    </g>
+    <g transform="translate(-8 12) scale(.78)">
+      <path d="M346 200c-5-23-1-42 12-55 8-8 20-6 24 4l8 24 10-56c3-14 21-13 22 2l1 44 12-43c4-13 21-9 20 5l-3 47 15-34c5-12 21-5 17 8l-17 64c-4 17-18 29-37 34l-15 4c-36 9-63-7-69-37z" fill="#287da1" stroke="#173642" stroke-width="6" stroke-linejoin="round"/>
+      <path d="M373 252v32c17 16 43 23 69 16l17-5v-37" fill="#17647a" stroke="#173642" stroke-width="6"/>
+      <path d="M366 280c25 15 56 18 86 8l14 22c-31 16-70 14-103-3z" fill="#ef805d" stroke="#173642" stroke-width="6"/>
+    </g>
+  </g>
+  <text x="320" y="390" text-anchor="middle" fill="#53717b" font-family="system-ui, sans-serif" font-size="21">Goggles and pair of insulated gloves</text>
+</svg>

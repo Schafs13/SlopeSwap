@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 420">
+  <defs>
+    <linearGradient id="sky" x2="0" y2="1">
+      <stop stop-color="#c1e3eb"/>
+      <stop offset="1" stop-color="#f8fcfd"/>
+    </linearGradient>
+    <linearGradient id="helmet" x2="0" y2="1">
+      <stop stop-color="#43a5bf"/>
+      <stop offset="1" stop-color="#145e75"/>
+    </linearGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="170%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="9"/>
+      <feOffset dy="8"/>
+      <feComponentTransfer><feFuncA type="linear" slope=".22"/></feComponentTransfer>
+      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="640" height="420" rx="24" fill="url(#sky)"/>
+  <path d="M0 257l136-123 81 83 105-133 133 152 72-66 113 106v144H0z" fill="#aeced7"/>
+  <path d="M136 134l42 49 39 34-43-13-22 14-24-23-26 13-17-9zM322 84l50 59 42 46-50-15-26 16-27-29-31 11-18-12zM527 170l39 43 29 31-37-9-21 15-24-23-23 12-15-10z" fill="#fff"/>
+  <path d="M0 286c121-39 232-22 338 13s199 22 302-14v135H0z" fill="#edf7f9"/>
+  <ellipse cx="320" cy="318" rx="176" ry="20" fill="#93b9c5" opacity=".34"/>
+  <g filter="url(#shadow)">
+    <path d="M166 238c7-99 69-158 154-158s147 59 154 158l-33 38H199z" fill="url(#helmet)"/>
+    <path d="M202 231c10-76 53-117 118-117s108 41 118 117z" fill="#56b5c8"/>
+    <path d="M169 231h302c-4 20-18 35-37 40l-49 14H254l-49-14c-19-5-33-20-36-40z" fill="#15313b"/>
+    <path d="M224 227c24-22 56-34 96-34s72 12 96 34l-13 34H237z" fill="#ef7d57"/>
+    <path d="M244 228c18-12 43-19 76-19s58 7 76 19l-7 19H251z" fill="#d9f3f6"/>
+    <path d="M258 266v28M382 266v28M258 294c34 22 90 22 124 0" fill="none" stroke="#15313b" stroke-width="8" stroke-linecap="round"/>
+    <path d="M263 147l18-14M320 129v-20M377 147l-18-14" stroke="#d9f3f6" stroke-width="8" stroke-linecap="round"/>
+  </g>
+</svg>

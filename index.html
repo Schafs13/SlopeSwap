@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>YourStartup</title>
-  <meta name="description" content="A student startup prototype for BSAD 281.">
+  <title>SlopeSwap</title>
+  <meta name="description" content="A marketplace for buying and selling used ski and snowboard gear.">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -14,11 +14,14 @@
        Each link points to a "view" further down the page (#home, #explore, #about).
        ========================================================= -->
   <header class="site-header">
-    <a class="brand" href="#home" id="brand-name">YourStartup</a>
+    <a class="brand" href="#home" id="brand-name">SlopeSwap</a>
     <nav aria-label="Main">
       <a href="#home">Home</a>
-      <a href="#explore">Explore</a>
+      <a href="#explore">Shop</a>
+      <a href="#saved">Saved</a>
+      <a href="#sell">Sell</a>
       <a href="#about">About</a>
+      <a class="account-link" href="#account" id="account-link">Create account</a>
     </nav>
   </header>
 
@@ -29,42 +32,92 @@
          ======================================================= -->
     <section id="home" data-view>
       <div class="hero">
-        <p class="eyebrow">Prototype</p>
-        <h1 id="tagline">One sentence that says what your startup does.</h1>
-        <p class="lead" id="pitch">
-          Who is your customer, what problem do they have, and why is your
-          solution better than what they use today?
-        </p>
-        <a class="button" href="#explore">See it in action</a>
+        <div class="hero-copy">
+          <p class="eyebrow">The mountain-ready gear exchange</p>
+          <h1 id="tagline">Buy and sell used ski gear with confidence.</h1>
+          <p class="lead" id="pitch">
+            SlopeSwap connects skiers and snowboarders looking to sell or buy quality
+            used equipment. We assess gear condition and arrange secure shipping and
+            payment so both sides can make a simple, safe sale.
+          </p>
+          <div class="hero-actions">
+            <a class="button" href="#explore">Browse the gear <span aria-hidden="true">→</span></a>
+            <a class="button secondary" href="#sell">Sell your gear</a>
+          </div>
+          <p class="hero-note"><span aria-hidden="true">✦</span> Good gear deserves another season.</p>
+        </div>
+        <div class="hero-visual" aria-hidden="true">
+          <img class="cover-art" src="assets/cover.svg" alt="">
+        </div>
       </div>
 
-      <div class="steps">
-        <div class="card">
-          <h2>1. Step one</h2>
-          <p>Describe the first thing a customer does.</p>
-        </div>
-        <div class="card">
-          <h2>2. Step two</h2>
-          <p>Describe what happens next.</p>
-        </div>
-        <div class="card">
-          <h2>3. Step three</h2>
-          <p>Describe the result the customer gets.</p>
-        </div>
+      <div class="audience-grid">
+        <article class="card">
+          <span class="tag">For buyers</span>
+          <h2>Find trusted used gear</h2>
+          <p>Shop condition-checked skis, snowboards, boots and protection.</p>
+          <a class="button secondary" href="#explore">Shop equipment</a>
+        </article>
+        <article class="card">
+          <span class="tag">For sellers</span>
+          <h2>Sell gear you no longer use</h2>
+          <p>Submit your item for assessment and let SlopeSwap arrange the sale and shipping.</p>
+          <a class="button secondary" href="#sell">Start a listing</a>
+        </article>
       </div>
+
     </section>
 
     <!-- =======================================================
          VIEW 2: EXPLORE — a list built from the fake data in data.js.
          ======================================================= -->
     <section id="explore" data-view hidden>
-      <h1>Explore</h1>
-      <p class="muted">These examples are fake. They come from <code>data.js</code>.</p>
+      <h1>Shop used gear</h1>
+      <p class="muted">Example listings from our curated ski and snowboard marketplace.</p>
 
-      <label class="search">
-        <span>Search</span>
-        <input type="search" id="search-box" placeholder="Type to filter…">
-      </label>
+      <div class="shop-stats" aria-label="Marketplace activity">
+        <p><strong id="active-sellers">248</strong><span>Active sellers</span></p>
+        <p><strong id="active-buyers">1,842</strong><span>Active buyers</span></p>
+        <p><strong id="active-listings">18</strong><span>Gear listings</span></p>
+      </div>
+      <p class="network-effect">More sellers means more choice for buyers, and more buyers means faster sales for sellers.</p>
+
+      <div class="shop-controls">
+        <label class="search">
+          <span>Search</span>
+          <input type="search" id="search-box" placeholder="Type to filter…">
+        </label>
+        <label>
+          <span>Equipment type</span>
+          <select id="category-filter">
+            <option value="">All equipment</option>
+            <option>Skis</option>
+            <option>Snowboards</option>
+            <option>Boots</option>
+            <option>Protection</option>
+            <option>Accessories</option>
+          </select>
+        </label>
+        <label>
+          <span>Shop for</span>
+          <select id="audience-filter">
+            <option value="">Everyone</option>
+            <option>Men</option>
+            <option>Women</option>
+            <option>Kids</option>
+            <option>Unisex</option>
+          </select>
+        </label>
+        <label>
+          <span>Sort by</span>
+          <select id="sort-listings">
+            <option value="featured">Featured</option>
+            <option value="price-low">Price: low to high</option>
+            <option value="price-high">Price: high to low</option>
+            <option value="name">Name: A to Z</option>
+          </select>
+        </label>
+      </div>
 
       <p class="muted" id="saved-count"></p>
       <div class="grid" id="listing-grid"></div>
@@ -72,12 +125,146 @@
     </section>
 
     <!-- =======================================================
-         VIEW 3: ABOUT — your team and your story.
+         VIEW 3: SAVED — listings saved by the buyer.
+         ======================================================= -->
+    <section id="saved" data-view hidden>
+      <h1>Saved gear</h1>
+      <p class="muted" id="saved-section-count"></p>
+      <div class="grid" id="saved-listing-grid"></div>
+      <p class="empty" id="saved-empty" hidden>You have not saved any gear yet.</p>
+      <button class="button secondary" id="clear-saved" type="button" hidden>Clear saved gear</button>
+    </section>
+
+    <!-- =======================================================
+         VIEW 4: SELL — submit equipment and track the demo listing.
+         ======================================================= -->
+    <section id="sell" data-view hidden>
+      <h1>Sell your gear</h1>
+      <p class="muted">Create a demo listing. Submitted information stays in this browser.</p>
+
+      <form class="seller-form" id="seller-form">
+        <label>
+          <span>Item name</span>
+          <input type="text" name="name" required placeholder="Example: All-mountain skis">
+        </label>
+        <label>
+          <span>Category</span>
+          <select name="category" required>
+            <option value="">Choose a category</option>
+            <option>Skis</option>
+            <option>Snowboards</option>
+            <option>Boots</option>
+            <option>Protection</option>
+            <option>Accessories</option>
+          </select>
+        </label>
+        <label>
+          <span>Condition</span>
+          <select name="condition" required>
+            <option value="">Choose a condition</option>
+            <option>Excellent</option>
+            <option>Good</option>
+            <option>Fair</option>
+          </select>
+        </label>
+        <label>
+          <span>Asking price</span>
+          <input type="number" name="price" min="1" step="1" required placeholder="250">
+        </label>
+        <label>
+          <span>Fits</span>
+          <select name="audience" required>
+            <option value="">Choose who it fits</option>
+            <option>Men</option>
+            <option>Women</option>
+            <option>Kids</option>
+            <option>Unisex</option>
+          </select>
+        </label>
+        <label class="full-width">
+          <span>Description</span>
+          <textarea name="description" required rows="4" placeholder="Age, use, size and any damage"></textarea>
+        </label>
+        <label class="full-width photo-upload">
+          <span>Equipment photos</span>
+          <input type="file" name="photos" id="seller-photos" accept="image/*" multiple required>
+          <small>Upload up to 5 clear photos. Each photo must be 5 MB or smaller.</small>
+          <div class="photo-preview" id="photo-preview" aria-live="polite"></div>
+          <div class="scan-result" id="photo-scan-result" hidden>
+            <strong>Prototype gear scan</strong>
+            <span id="photo-score"></span>
+            <small>Demo estimate based on photo count, resolution and the seller's condition selection. It does not inspect hidden damage or verify authenticity.</small>
+          </div>
+        </label>
+        <button class="button" type="submit">Submit for assessment</button>
+      </form>
+
+      <div class="seller-status" aria-live="polite">
+        <h2>Your submitted listings</h2>
+        <div class="listing-dashboard" id="listing-dashboard" hidden>
+          <p><strong id="listing-total">0</strong><span>Total listings</span></p>
+          <p><strong id="listing-active">0</strong><span>Active</span></p>
+          <p><strong id="listing-pending">0</strong><span>Pending</span></p>
+        </div>
+        <p class="muted" id="seller-empty">No listings submitted yet.</p>
+        <div class="grid" id="seller-listings"></div>
+      </div>
+    </section>
+
+    <!-- =======================================================
+         VIEW 4: ABOUT — your team and your story.
          ======================================================= -->
     <section id="about" data-view hidden>
       <h1>About us</h1>
-      <p>Tell the story of why your team started this company.</p>
-      <p>Use first names only, or no names at all — this site is public.</p>
+      <p>SlopeSwap started with a simple idea: good ski and snowboard gear should get a second season instead of sitting unused.</p>
+      <p>Our platform brings sellers and buyers together, adds clear condition checks and handles the logistics of shipping and payment. We make used gear easier to trust and easier to move.</p>
+    </section>
+
+    <!-- =======================================================
+         VIEW 5: ACCOUNT — local prototype account creation.
+         ======================================================= -->
+    <section id="account" data-view hidden>
+      <h1>Create your account</h1>
+      <p class="muted">Use one SlopeSwap account to shop for gear, save listings and sell your own equipment. This demo stores only a profile in this browser.</p>
+      <p class="gate-message" id="account-gate-message" role="status" hidden></p>
+
+      <form class="account-form" id="account-form">
+        <label>
+          <span>First name</span>
+          <input type="text" name="name" required autocomplete="given-name" placeholder="Alex">
+        </label>
+        <label>
+          <span>Email</span>
+          <input type="email" name="email" required autocomplete="email" placeholder="alex@example.com">
+        </label>
+        <fieldset class="membership-options">
+          <legend>Choose a membership</legend>
+          <label>
+            <input type="radio" name="membership" value="Monthly — $12/month" required>
+            <span><strong>Monthly</strong><br>$12 per month</span>
+          </label>
+          <label>
+            <input type="radio" name="membership" value="Seasonal — $30/season">
+            <span><strong>Seasonal</strong><br>$30 per ski season</span>
+          </label>
+          <label>
+            <input type="radio" name="membership" value="Annual — $96/year">
+            <span><strong>Annual</strong><br>$96 per year</span>
+          </label>
+        </fieldset>
+        <label class="checkout-confirmation">
+          <input type="checkbox" name="checkout" required>
+          <span>I understand this is a demo payment; no money will be charged.</span>
+        </label>
+        <button class="button" type="submit">Activate membership</button>
+      </form>
+
+      <div class="account-profile" id="account-profile" hidden>
+        <h2 id="profile-name"></h2>
+        <p id="profile-email"></p>
+        <p id="profile-membership"></p>
+        <button class="button secondary" id="sign-out" type="button">Sign out</button>
+      </div>
     </section>
 
   </main>

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 420">
+  <rect width="640" height="420" rx="24" fill="#eaf3f6"/>
+  <path d="M0 330L160 170l90 90L390 100l250 230v90H0z" fill="#b6cfda"/>
+  <path d="M160 170l28 28 62 62-35-8zM390 100l42 38 208 192h-82z" fill="#fff"/>
+  <g transform="rotate(-17 320 230)" fill="none" stroke-linecap="round">
+    <path d="M217 105v205" stroke="#287da1" stroke-width="12"/>
+    <path d="M217 105v24" stroke="#15313b" stroke-width="20"/>
+    <path d="M200 292h34M217 310l-10 21" stroke="#15313b" stroke-width="8"/>
+    <path d="M417 90v220" stroke="#ef7d57" stroke-width="12"/>
+    <path d="M417 90v25" stroke="#15313b" stroke-width="20"/>
+    <path d="M400 292h34M417 310l-10 21" stroke="#15313b" stroke-width="8"/>
+  </g>
+  <path d="M235 221c17-17 50-17 69 0l16 16 16-16c19-17 52-17 69 0l-8 43c-3 15-18 25-33 22l-44-9-44 9c-15 3-30-7-33-22z" fill="#15313b"/>
+  <path d="M249 232c13-9 32-9 44 2l8 24-35 7c-8 2-16-4-17-12z" fill="#62b4c6"/>
+  <path d="M392 232c-13-9-32-9-44 2l-8 24 35 7c8 2 16-4 17-12z" fill="#62b4c6"/>
+  <path d="M320 239v39" stroke="#ef7d57" stroke-width="8" stroke-linecap="round"/>
+  <text x="320" y="385" text-anchor="middle" fill="#58717a" font-family="system-ui" font-size="24">Ski accessories</text>
+</svg>

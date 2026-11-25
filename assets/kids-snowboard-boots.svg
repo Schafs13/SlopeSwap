@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 420">
+  <defs>
+    <linearGradient id="bg" x2="0" y2="1">
+      <stop stop-color="#d9edf2"/>
+      <stop offset="1" stop-color="#f9fcfd"/>
+    </linearGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="170%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="8"/>
+      <feOffset dy="8"/>
+      <feComponentTransfer><feFuncA type="linear" slope=".2"/></feComponentTransfer>
+      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="640" height="420" rx="24" fill="url(#bg)"/>
+  <path d="M0 324c133-39 244-24 344 9s196 24 296-10v97H0z" fill="#e7f2f4"/>
+  <ellipse cx="326" cy="344" rx="180" ry="16" fill="#91b4bf" opacity=".3"/>
+  <g filter="url(#shadow)">
+    <g transform="translate(100 32) scale(.82)">
+      <path d="M164 92h106l13 117 31 48 58 29c17 8 24 24 18 42l-4 14H146c-18 0-30-14-27-32l20-110z" fill="#f1eee8" stroke="#b9c9cd" stroke-width="4"/>
+      <path d="M164 96h107l-5 60-99 5z" fill="#ef805d"/>
+      <path d="M142 292h239c17 0 26 11 21 24l-3 12H151c-20 0-28-15-9-36z" fill="#173642"/>
+      <path d="M174 162l76-2 4 86-86 3z" fill="#e4eef0"/>
+      <path d="M185 174l53 43M238 174l-54 46M184 195l58 1M189 219l49-1" stroke="#17647a" stroke-width="7" stroke-linecap="round"/>
+      <path d="M249 200h22" stroke="#f4c777" stroke-width="9" stroke-linecap="round"/>
+      <path d="M179 251c29 12 57 13 89 4" fill="none" stroke="#b9c9cd" stroke-width="5"/>
+    </g>
+    <g transform="translate(226 46) scale(.72)">
+      <path d="M164 92h106l13 117 31 48 58 29c17 8 24 24 18 42l-4 14H146c-18 0-30-14-27-32l20-110z" fill="#e7f0f2" stroke="#b9c9cd" stroke-width="4"/>
+      <path d="M164 96h107l-5 60-99 5z" fill="#17647a"/>
+      <path d="M142 292h239c17 0 26 11 21 24l-3 12H151c-20 0-28-15-9-36z" fill="#173642"/>
+      <path d="M174 162l76-2 4 86-86 3z" fill="#fff"/>
+      <path d="M185 174l53 43M238 174l-54 46M184 195l58 1M189 219l49-1" stroke="#ef805d" stroke-width="7" stroke-linecap="round"/>
+      <path d="M249 200h22" stroke="#f4c777" stroke-width="9" stroke-linecap="round"/>
+      <path d="M179 251c29 12 57 13 89 4" fill="none" stroke="#b9c9cd" stroke-width="5"/>
+    </g>
+  </g>
+  <text x="320" y="390" text-anchor="middle" fill="#53717b" font-family="system-ui, sans-serif" font-size="21">Kids' lace-up snowboard boots</text>
+</svg>

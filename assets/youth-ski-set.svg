@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 420">
+  <defs>
+    <linearGradient id="bg" x2="0" y2="1">
+      <stop stop-color="#d9eef3"/>
+      <stop offset="1" stop-color="#f8fcfd"/>
+    </linearGradient>
+    <linearGradient id="ski" x2="1" y2="1">
+      <stop stop-color="#48afc2"/>
+      <stop offset="1" stop-color="#17647a"/>
+    </linearGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="170%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="8"/>
+      <feOffset dy="8"/>
+      <feComponentTransfer><feFuncA type="linear" slope=".2"/></feComponentTransfer>
+      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="640" height="420" rx="24" fill="url(#bg)"/>
+  <path d="M0 308c118-40 239-25 342 10s196 26 298-12v114H0z" fill="#e7f2f4"/>
+  <ellipse cx="320" cy="342" rx="178" ry="17" fill="#95bac4" opacity=".3"/>
+  <g filter="url(#shadow)" transform="rotate(-12 320 210)">
+    <path d="M226 81c15-15 31-15 46 0l17 255c-27 18-54 18-81 0z" fill="url(#ski)"/>
+    <path d="M226 82c15-15 31-15 46 0l-4 30c-13 10-26 10-39 0z" fill="#ef805d"/>
+    <path d="M236 145v158" stroke="#e0f5f7" stroke-width="6" stroke-linecap="round"/>
+    <path d="M220 214h59v35h-59z" rx="8" fill="#173642"/>
+    <path d="M229 222h41v9h-41z" fill="#f3b56f"/>
+    <path d="M338 70c15-15 31-15 46 0l18 266c-29 18-57 18-86 0z" fill="#ef805d"/>
+    <path d="M338 70c15-15 31-15 46 0l-4 31c-13 10-26 10-39 0z" fill="#17647a"/>
+    <path d="M348 135v169" stroke="#fff0df" stroke-width="6" stroke-linecap="round"/>
+    <path d="M334 211h63v36h-63z" fill="#173642"/>
+    <path d="M343 220h45v9h-45z" fill="#c6e7ed"/>
+  </g>
+  <text x="320" y="389" text-anchor="middle" fill="#53717b" font-family="system-ui, sans-serif" font-size="21">Youth skis with bindings</text>
+</svg>

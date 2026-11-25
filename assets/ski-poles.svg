@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 420">
+  <defs>
+    <linearGradient id="bg" x2="0" y2="1">
+      <stop stop-color="#d9edf2"/>
+      <stop offset="1" stop-color="#f9fcfd"/>
+    </linearGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="170%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="7"/>
+      <feOffset dy="7"/>
+      <feComponentTransfer><feFuncA type="linear" slope=".18"/></feComponentTransfer>
+      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="640" height="420" rx="24" fill="url(#bg)"/>
+  <path d="M0 322c130-38 244-24 343 9s197 24 297-10v99H0z" fill="#e7f2f4"/>
+  <ellipse cx="320" cy="343" rx="174" ry="15" fill="#91b4bf" opacity=".3"/>
+  <g filter="url(#shadow)" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <g transform="rotate(-11 260 210)">
+      <path d="M228 93v214" stroke="#ef805d" stroke-width="12"/>
+      <path d="M228 87v34" stroke="#173642" stroke-width="21"/>
+      <path d="M218 84c-19-2-26 8-26 19s12 18 29 16" stroke="#173642" stroke-width="7"/>
+      <path d="M228 267v39" stroke="#f4c777" stroke-width="5"/>
+      <path d="M207 293c14-8 28-8 42 0l-4 23h-34z" fill="#17647a" stroke="#173642" stroke-width="5"/>
+      <path d="M228 307v29" stroke="#173642" stroke-width="8"/>
+      <path d="M214 336h28" stroke="#173642" stroke-width="6"/>
+      <path d="M228 123v108" stroke="#ffd7c7" stroke-width="3"/>
+    </g>
+    <g transform="rotate(10 386 210)">
+      <path d="M392 84v222" stroke="#287da1" stroke-width="12"/>
+      <path d="M392 78v36" stroke="#173642" stroke-width="21"/>
+      <path d="M382 77c-19-2-26 8-26 19s12 18 29 16" stroke="#173642" stroke-width="7"/>
+      <path d="M392 266v40" stroke="#f4c777" stroke-width="5"/>
+      <path d="M371 292c14-8 28-8 42 0l-4 23h-34z" fill="#17647a" stroke="#173642" stroke-width="5"/>
+      <path d="M392 306v29" stroke="#173642" stroke-width="8"/>
+      <path d="M378 335h28" stroke="#173642" stroke-width="6"/>
+      <path d="M392 116v112" stroke="#d4edf2" stroke-width="3"/>
+    </g>
+  </g>
+  <text x="320" y="388" text-anchor="middle" fill="#53717b" font-family="system-ui, sans-serif" font-size="21">Pair of adjustable ski poles</text>
+</svg>

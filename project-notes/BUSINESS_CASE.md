@@ -4,7 +4,7 @@ Your prototype shows *what* the product looks like. This document explains *why*
 
 ## 1. The idea
 
-- **Customer:** Who exactly is it for?
+- **Customer:** Who exactly is it for? 
 - **Problem:** What problem do they have today, and how do they solve it now?
 - **Solution:** What does your product do differently or better?
 - **Revenue:** How does the company make money?

@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 420">
+  <defs>
+    <linearGradient id="sky" x2="0" y2="1">
+      <stop stop-color="#b9e1eb"/>
+      <stop offset="1" stop-color="#f8fcfd"/>
+    </linearGradient>
+    <linearGradient id="skiBlue" x2="1" y2="1">
+      <stop stop-color="#42a6c0"/>
+      <stop offset="1" stop-color="#145e75"/>
+    </linearGradient>
+    <filter id="shadow" x="-40%" y="-30%" width="180%" height="170%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="7"/>
+      <feOffset dy="8"/>
+      <feComponentTransfer><feFuncA type="linear" slope=".24"/></feComponentTransfer>
+      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="640" height="420" rx="24" fill="url(#sky)"/>
+  <circle cx="510" cy="82" r="42" fill="#fff3cf"/>
+  <path d="M0 250l134-119 77 79 115-132 130 147 74-73 110 106v162H0z" fill="#a8cbd5"/>
+  <path d="M134 131l40 45 37 34-41-12-21 13-22-21-26 14-18-9zM326 78l49 56 41 49-49-16-25 16-29-28-30 12-17-12zM530 152l35 38 31 36-39-10-19 14-25-23-27 11-14-10z" fill="#fff"/>
+  <path d="M0 274c115-39 218-21 325 14s213 19 315-17v149H0z" fill="#eef7f9"/>
+  <path d="M0 346c138-39 251-8 353 19s194 17 287-15v70H0z" fill="#d4e9ee"/>
+  <g filter="url(#shadow)" transform="rotate(-13 320 226)">
+    <path d="M236 81c17-17 35-17 52 0l17 264c-29 20-58 20-87 0z" fill="url(#skiBlue)"/>
+    <path d="M236 82c17-17 35-17 52 0l-4 34c-15 12-30 12-45 0z" fill="#ef7d57"/>
+    <path d="M246 145v159" stroke="#d6f0f4" stroke-width="6" stroke-linecap="round"/>
+    <path d="M234 218h61v31h-61z" rx="8" fill="#15313b"/>
+    <path d="M243 225h43v9h-43z" fill="#ef7d57"/>
+    <path d="M341 67c17-17 35-17 52 0l18 278c-30 20-59 20-89 0z" fill="#ef7d57"/>
+    <path d="M341 67c17-17 35-17 52 0l-4 34c-15 12-30 12-45 0z" fill="#145e75"/>
+    <path d="M351 134v168" stroke="#ffe0d3" stroke-width="6" stroke-linecap="round"/>
+    <path d="M338 211h65v31h-65z" fill="#15313b"/>
+    <path d="M348 218h45v9h-45z" fill="#b9e1eb"/>
+  </g>
+</svg>

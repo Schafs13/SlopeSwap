@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 420">
+  <defs>
+    <linearGradient id="bg" x2="0" y2="1">
+      <stop stop-color="#d9edf2"/>
+      <stop offset="1" stop-color="#f9fcfd"/>
+    </linearGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="170%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="8"/>
+      <feOffset dy="8"/>
+      <feComponentTransfer><feFuncA type="linear" slope=".2"/></feComponentTransfer>
+      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="640" height="420" rx="24" fill="url(#bg)"/>
+  <path d="M0 324c133-39 244-24 344 9s196 24 296-10v97H0z" fill="#e7f2f4"/>
+  <ellipse cx="326" cy="344" rx="180" ry="16" fill="#91b4bf" opacity=".3"/>
+  <g filter="url(#shadow)">
+    <g transform="translate(98 23) scale(.85)">
+      <path d="M126 91h136l-6 117 29 51 71 29c17 7 25 24 20 41l-4 15H137c-19 0-32-15-29-34l17-105z" fill="#50aebf"/>
+      <path d="M150 108h91l-6 96-25 42-82-5 17-92z" fill="#eaf4f5"/>
+      <path d="M119 310h243c17 0 27 10 24 22l-2 12H140c-19 0-29-13-21-34z" fill="#173642"/>
+      <path d="M136 248l114-2 38 32-37 14-117-8z" fill="#ef805d"/>
+      <path d="M163 154h87M156 191h83" stroke="#173642" stroke-width="7" stroke-linecap="round"/>
+      <path d="M246 154h25v16h-25zM239 191h25v16h-25z" fill="#f4c777"/>
+      <path d="M177 93h84v23h-84z" fill="#173642"/>
+    </g>
+    <g transform="translate(230 34) scale(.75)">
+      <path d="M126 91h136l-6 117 29 51 71 29c17 7 25 24 20 41l-4 15H137c-19 0-32-15-29-34l17-105z" fill="#ef805d"/>
+      <path d="M150 108h91l-6 96-25 42-82-5 17-92z" fill="#fff0df"/>
+      <path d="M119 310h243c17 0 27 10 24 22l-2 12H140c-19 0-29-13-21-34z" fill="#173642"/>
+      <path d="M136 248l114-2 38 32-37 14-117-8z" fill="#17647a"/>
+      <path d="M163 154h87M156 191h83" stroke="#173642" stroke-width="7" stroke-linecap="round"/>
+      <path d="M246 154h25v16h-25zM239 191h25v16h-25z" fill="#f4c777"/>
+      <path d="M177 93h84v23h-84z" fill="#173642"/>
+    </g>
+  </g>
+  <text x="320" y="390" text-anchor="middle" fill="#53717b" font-family="system-ui, sans-serif" font-size="21">Junior rigid ski boots</text>
+</svg>

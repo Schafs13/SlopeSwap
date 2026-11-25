@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 420">
+  <defs>
+    <linearGradient id="bg" x2="0" y2="1">
+      <stop stop-color="#d6edf2"/>
+      <stop offset="1" stop-color="#f8fcfd"/>
+    </linearGradient>
+    <linearGradient id="shell" x2="1" y2="1">
+      <stop stop-color="#58b8c8"/>
+      <stop offset="1" stop-color="#17647a"/>
+    </linearGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="170%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="8"/>
+      <feOffset dy="8"/>
+      <feComponentTransfer><feFuncA type="linear" slope=".2"/></feComponentTransfer>
+      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="640" height="420" rx="24" fill="url(#bg)"/>
+  <path d="M0 322c131-37 243-24 340 9s198 25 300-10v99H0z" fill="#e6f1f3"/>
+  <ellipse cx="324" cy="341" rx="201" ry="17" fill="#91b4bf" opacity=".3"/>
+  <g filter="url(#shadow)">
+    <g transform="translate(48 7)">
+      <path d="M126 93h135l-7 113 31 54 72 26c19 7 28 25 23 43l-5 18H134c-21 0-35-16-32-37l18-89z" fill="url(#shell)"/>
+      <path d="M151 109h89l-6 97-25 45-85-7 18-92z" fill="#e9f4f4"/>
+      <path d="M116 314h250c17 0 27 11 25 23l-2 10H139c-20 0-31-12-23-33z" fill="#173642"/>
+      <path d="M137 252l116-3 41 35-39 15-119-10z" fill="#ef805d"/>
+      <path d="M164 151h87M157 183h86M150 215h82" stroke="#173642" stroke-width="6" stroke-linecap="round"/>
+      <path d="M248 152h26v15h-26zM241 185h26v15h-26zM233 218h26v15h-26z" fill="#f4c777"/>
+      <path d="M177 94h86v24h-86z" rx="10" fill="#173642"/>
+      <path d="M256 266l22 4-2 22-23-4z" fill="#f4c777"/>
+      <path d="M334 279l22 8" stroke="#173642" stroke-width="8" stroke-linecap="round"/>
+    </g>
+    <g transform="translate(5 26) scale(.78)">
+      <path d="M126 93h135l-7 113 31 54 72 26c19 7 28 25 23 43l-5 18H134c-21 0-35-16-32-37l18-89z" fill="#ef805d"/>
+      <path d="M151 109h89l-6 97-25 45-85-7 18-92z" fill="#fff0df"/>
+      <path d="M116 314h250c17 0 27 11 25 23l-2 10H139c-20 0-31-12-23-33z" fill="#173642"/>
+      <path d="M137 252l116-3 41 35-39 15-119-10z" fill="#17647a"/>
+      <path d="M164 151h87M157 183h86M150 215h82" stroke="#173642" stroke-width="6" stroke-linecap="round"/>
+      <path d="M248 152h26v15h-26zM241 185h26v15h-26zM233 218h26v15h-26z" fill="#f4c777"/>
+      <path d="M177 94h86v24h-86z" rx="10" fill="#173642"/>
+      <path d="M256 266l22 4-2 22-23-4z" fill="#f4c777"/>
+      <path d="M334 279l22 8" stroke="#173642" stroke-width="8" stroke-linecap="round"/>
+    </g>
+  </g>
+  <text x="320" y="390" text-anchor="middle" fill="#53717b" font-family="system-ui, sans-serif" font-size="21">Rigid touring ski boots</text>
+</svg>

@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 420">
+  <defs>
+    <linearGradient id="sky" x2="0" y2="1">
+      <stop stop-color="#aedce7"/>
+      <stop offset="1" stop-color="#f4fbfc"/>
+    </linearGradient>
+    <linearGradient id="board" x2="1" y2="1">
+      <stop stop-color="#f28a60"/>
+      <stop offset="1" stop-color="#ca5848"/>
+    </linearGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="170%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="8"/>
+      <feOffset dy="8"/>
+      <feComponentTransfer><feFuncA type="linear" slope=".25"/></feComponentTransfer>
+      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="640" height="420" rx="24" fill="url(#sky)"/>
+  <circle cx="512" cy="78" r="38" fill="#fff3cf"/>
+  <path d="M0 251l128-116 92 87 111-137 126 151 73-64 110 102v146H0z" fill="#a9cbd5"/>
+  <path d="M128 135l42 48 50 39-48-12-24 13-25-22-23 13-23-10zM331 85l47 55 44 51-51-17-28 15-24-28-32 10-17-11z" fill="#fff"/>
+  <path d="M0 284c116-48 233-25 335 11 109 38 197 26 305-15v140H0z" fill="#eef7f9"/>
+  <path d="M0 353c125-34 235-17 347 16 111 33 205 17 293-11v62H0z" fill="#d2e8ee"/>
+  <g filter="url(#shadow)" transform="rotate(18 320 214)">
+    <path d="M279 48c31-28 63-28 94 0l47 313c-63 47-125 47-188 0z" fill="url(#board)"/>
+    <path d="M295 86c20-17 41-17 62 0l34 249c-43 30-87 30-130 0z" fill="#287da1"/>
+    <path d="M310 119l28 22-18 25-28-22zM370 282l28 22-18 25-28-22z" fill="#f3b56f"/>
+    <path d="M291 156c35-21 70-21 105 0v34c-35 22-70 22-105 0zM311 240c31-19 62-19 93 0v31c-31 20-62 20-93 0z" fill="#15313b"/>
+    <path d="M304 169h79M322 251h70" stroke="#d6f0f4" stroke-width="7" stroke-linecap="round"/>
+  </g>
+</svg>

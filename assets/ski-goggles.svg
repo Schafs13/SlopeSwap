@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 420">
+  <defs>
+    <linearGradient id="bg" x2="0" y2="1">
+      <stop stop-color="#d9edf2"/>
+      <stop offset="1" stop-color="#f9fcfd"/>
+    </linearGradient>
+    <linearGradient id="lens" x2="1" y2="1">
+      <stop stop-color="#8dd7df"/>
+      <stop offset=".48" stop-color="#318ca6"/>
+      <stop offset="1" stop-color="#173f5b"/>
+    </linearGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="170%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="9"/>
+      <feOffset dy="9"/>
+      <feComponentTransfer><feFuncA type="linear" slope=".22"/></feComponentTransfer>
+      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="640" height="420" rx="24" fill="url(#bg)"/>
+  <path d="M0 321c132-37 241-23 343 10s197 24 297-10v99H0z" fill="#e7f2f4"/>
+  <ellipse cx="320" cy="324" rx="191" ry="18" fill="#91b4bf" opacity=".3"/>
+  <g filter="url(#shadow)">
+    <path d="M107 197c34-32 84-48 141-48h144c57 0 107 16 141 48l-20 104c-5 27-27 45-55 45H182c-28 0-50-18-55-45z" fill="#173642"/>
+    <path d="M133 210c31-23 68-34 115-34h144c47 0 84 11 115 34l-16 82c-4 19-17 30-37 30H186c-20 0-33-11-37-30z" fill="url(#lens)"/>
+    <path d="M310 180v141" stroke="#173642" stroke-width="14"/>
+    <path d="M158 219c34-19 63-27 100-27" fill="none" stroke="#d7f6f7" stroke-width="9" stroke-linecap="round" opacity=".85"/>
+    <path d="M202 329c16 10 34 15 54 15M384 344c20 0 38-5 54-15" fill="none" stroke="#f2eee8" stroke-width="8" stroke-linecap="round"/>
+    <path d="M129 209l-52-19M511 209l52-19" stroke="#ef805d" stroke-width="17" stroke-linecap="round"/>
+    <path d="M115 212c-17 31-22 60-16 87M525 212c17 31 22 60 16 87" fill="none" stroke="#173642" stroke-width="13" stroke-linecap="round"/>
+  </g>
+  <text x="320" y="388" text-anchor="middle" fill="#53717b" font-family="system-ui, sans-serif" font-size="21">Single pair of ski goggles</text>
+</svg>

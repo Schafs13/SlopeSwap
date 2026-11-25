@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 420">
+  <rect width="640" height="420" rx="24" fill="#edf4f6"/>
+  <path d="M0 335l160-150 112 105 130-150 238 195v85H0z" fill="#b6cfda"/>
+  <path d="M160 180l26 24 86 80 7 28-22 22-133-7-12-17 13-27 21-62z" fill="#287da1"/>
+  <path d="M160 180l76 18 42 86-57 15-71-64z" fill="#145e75"/>
+  <path d="M122 322l12-24 143 7 12 23-19 14-137-4z" fill="#15313b"/>
+  <path d="M182 207l77 36M167 234l79 36M151 263l76 35" fill="none" stroke="#dceaf0" stroke-width="10" stroke-linecap="round"/>
+  <path d="M344 153l29 18 70 88 1 32-19 22-129 9-16-15 7-30 25-58z" fill="#ef7d57"/>
+  <path d="M344 153l76 37 39 69-54 25-72-60z" fill="#d96849"/>
+  <path d="M300 322l9-27 134-9 16 21-17 19-130 16z" fill="#15313b"/>
+  <path d="M364 183l70 48M346 211l74 46M330 241l72 43" fill="none" stroke="#fff" stroke-width="10" stroke-linecap="round"/>
+  <circle cx="258" cy="248" r="8" fill="#f3b56f"/>
+  <circle cx="420" cy="232" r="8" fill="#f3b56f"/>
+  <text x="320" y="385" text-anchor="middle" fill="#58717a" font-family="system-ui" font-size="24">Ski &amp; snowboard boots</text>
+</svg>
