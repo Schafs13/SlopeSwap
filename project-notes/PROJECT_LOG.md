@@ -2,34 +2,9 @@
 
 Keep this up to date as you go — a few lines per work session is enough. It's much harder to reconstruct at the end.
 
-**Team name:** 
+**Team name:** Schafs13
 **Startup name:** SlopeSwap
 **Live site link:** https://schafs13.github.io/ai-to-startup-template/
-
----
-
-## Summary of website changes
-
-The work below is reconstructed from the project's commit history.
-
-1. **Started from the course template** — Created the original HTML/CSS/JavaScript workspace and project-note structure.
-2. **Defined the SlopeSwap concept** — Replaced the sample startup data with the idea of a used ski and snowboard marketplace.
-3. **Built the initial catalog** — Added 18 realistic fake listings across skis, snowboards, boots, protection and accessories, along with product illustrations.
-4. **Created the home page journeys** — Added separate guidance for buyers and sellers, with links to shop, save or submit gear.
-5. **Added the shop experience** — Built listing cards plus search, category, audience and price/name sorting controls.
-6. **Added saved gear** — Added Save and undo actions, a saved-items view and a clear-saved control using browser local storage.
-7. **Added the demo account flow** — Added account creation and gated the purchase and seller actions behind a browser-local profile.
-8. **Added purchase requests** — Added buy/request buttons, a request-sent state and purchase-request counts.
-9. **Built the seller flow** — Added a seller form for item details, condition and asking price, plus demo photo upload previews.
-10. **Added market insights** — Calculated category price averages, typical sale times and suggested price ranges from the fake listings.
-11. **Added seller history and dashboard** — Added seller ratings, sales counts, listing status, selling controls and submitted-listing tracking.
-12. **Added network-effect messaging** — Added seller, buyer and active-listing stats plus text explaining how each side supports the other.
-13. **Added demo trust tools** — Added a photo-quality score, rating history and founding-seller offer; clearly labeled these as estimates or demos.
-14. **Added interface feedback** — Added confirmation toasts, undo for saving, clearing filters and responsive mobile navigation.
-15. **Finished responsive styling** — Updated layout, cards, forms, navigation and status elements for the full SlopeSwap experience.
-16. **Prepared the project log** — Reconstructed the work sessions and documented what would need to become real in a production version.
-17. **Checked and refined the latest copy** — Audited the full website implementation and changed the founding-seller offer to “After 3 sales: 1 month free membership.”
-18. **Expanded the business case** — Restored detailed coverage of the idea, customer and IT value, revenue model, network effects, defensibility, cloud operations, risks and validation while targeting a more complete course submission.
 
 ## Work sessions
 
@@ -64,7 +39,7 @@ The work below is reconstructed from the project's commit history.
   7. "Add a Market insights panel on the Sell page"
   8. "Add How to buy and How to sell steps on the home page"
 - **What worked:** I completed the shop filtering, saved gear, account-gated purchase requests, seller listings, market insights, photo previews and seller dashboard.
-- **What broke, and how I fixed it:** The fake account and payment flows could appear more real than they are, so I documented that they are browser-local demos and described the real services a production version would need.
+- **What broke, and how I fixed it:** Several listing cards for boots, poles and goggles showed the helmet image instead of the correct product illustration. I created separate SVG assets and connected each listing to the proper image. The signed-out Sell form stopped silently after submission. I added account-gating feedback and a redirect to Create account, then returned the user to finish the listing. On a phone under 600px, the nav wrapped to two lines and split "Create account". I replaced the wrapped layout with a Menu button. I also documented that the account, payment and listing flows are browser-local demos rather than real services.
 - **Committed?** yes — commit message: "finished website"
 
 ### Session — 2026-11-26 — project log
@@ -103,7 +78,28 @@ The work below is reconstructed from the project's commit history.
   1. "you trimmed it to much the grading rubric says 1500 words, expand back some of what u trimmed"
 - **What worked:** I restored substantial detail while keeping the final business case focused on the rubric topics and grounded in the implemented prototype.
 - **What broke, and how I fixed it:** The first expanded draft became too long. I reviewed the structure and rewrote it more concisely, preserving the central sections and evidence instead of simply adding padding.
-- **Committed?** no — documentation update in progress
+- **Committed?** yes — commit `c17a2ef` and later documentation commits
+
+### Session — 2026-11-26 — added defensibility analysis
+
+- **Goal for this session:** I expanded the business case's defensibility section with a complete VRIN analysis and a realistic competitor scenario.
+- **Key prompts I gave Copilot** (important prompts from this work period):
+  1. "Use the term VRIN and test each resource against all four parts: sold-price data, seller ratings, assessors and condition process, local partnerships"
+  2. "Say which advantages strengthen over time and why"
+  3. "Add what a well-funded rival would need and how long copying would take"
+- **What worked:** The revised section now gives a separate valuable, rare, hard-to-imitate and non-substitutable assessment for each resource, plus a one-line verdict and an explanation of network growth.
+- **What broke, and how I fixed it:** The earlier defensibility discussion was too general and did not test each resource systematically. I replaced it with explicit VRIN criteria and an approximate copy timeline that matches the project log.
+- **Committed?** yes — commit `220e427`
+
+### Session — 2026-11-26 — clarified cold-start strategy
+
+- **Goal for this session:** I revised the network-effects and cold-start section so the prototype evidence and founding-seller offer were more specific.
+- **Key prompts I gave Copilot** (important prompts from this work period):
+  1. "Name the exact part of the prototype: the Shop page stats bar (248 sellers · 1,842 buyers · 18 listings) and the line 'More sellers means more choice…'"
+  2. "Explain how the founding-seller offer helps get the first sellers"
+- **What worked:** The business case now names the exact prototype elements and treats the founding-seller benefit as seller acquisition and activation, not only retention.
+- **What broke, and how I fixed it:** The previous wording described network evidence and the offer too generally. I replaced it with exact UI details and a concrete explanation of recruiting sellers through the reward, shop partnerships and assessment events.
+- **Committed?** yes — commit `cb2c4fd` and `eb387e1`
 
 ## Previous commits
 
@@ -115,6 +111,11 @@ The work below is reconstructed from the project's commit history.
 | `8c64b39` | Added the project log. |
 | `460b979` | Edited the project log. |
 | `254b9e6` | Worked some more: audited the website, fixed final copy and removed temporary background experiments. |
+| `567e991` | Added project-log work. |
+| `c17a2ef` | Added the expanded business case. |
+| `220e427` | Updated the business case. |
+| `cb2c4fd` | Continued the project-log and documentation work. |
+| `eb387e1` | Updated the project log. |
 
 ---
 
@@ -123,8 +124,8 @@ The work below is reconstructed from the project's commit history.
 | Date | What went wrong | What we tried | What finally fixed it |
 |---|---|---|---|
 | 2026-11-25 | The boot, pole and goggle listings showed the helmet picture. | We checked which listings used `protection.svg`. | Copilot created separate SVGs for each item and used the correct picture for each listing. |
-| 2026-11-26 | The Sell form did nothing when a signed-out user submitted it. | We tested it and found that it silently stopped. | We added a message and a redirect to Create account, then returned the user to the listing. |
-| 2026-11-26 | On a phone, the nav wrapped to two lines and "Create account" split in half. | We tried shrinking the text. | We added a Menu button for screens under 600px. |
+| 2026-11-25 | The Sell form did nothing when a signed-out user submitted it. | We tested it and found that it silently stopped. | We added a message and a redirect to Create account, then returned the user to the listing. |
+| 2026-11-25 | On a phone, the nav wrapped to two lines and "Create account" split in half. | We tried shrinking the text. | We added a Menu button for screens under 600px. |
 | 2026-11-26 | A home-page background change did not match what I wanted. | We tried adjusting it. | We undid the change and restored the original styles. |
 
 ## What a real version would need
@@ -150,7 +151,7 @@ Everything we wanted but faked or left out — real logins, a real database, pay
 2. Which parts were easy, and which were hard? Why do you think that is?
    Content, layouts and repetitive components were relatively easy because an AI assistant could apply one pattern across the page. The harder part was coordinating multiple states, such as saving an item, submitting a seller listing, gating an action behind an account or preventing a repeat purchase request. Those behaviors require careful rules and testing, not only polished text or styling.
 3. If a competitor had the same AI tool, how long would it take them to copy your site?
-   A competitor could copy the visible design and straightforward client-side interactions in a few hours to a few days. However, copying the useful company would take much longer: a trustworthy inventory, working seller and buyer network, condition processes, payment and shipping operations, and a recognized brand could take roughly one to three years to establish.
+   A competitor could copy the visible design and straightforward client-side interactions in days or a few months. To copy the useful company, it would need money to subsidize both sides, trained assessors, a real sales history, verified ratings, operating relationships and a trustworthy inventory. Establishing that combination could take roughly one to three years, matching SlopeSwap's VRIN advantage and network-development timeline.
 
 ### Business lesson
 
