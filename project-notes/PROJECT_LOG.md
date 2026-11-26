@@ -8,13 +8,13 @@
 
 ### Session — 2026-11-01 — Initial commit
 
-- **Goal:** Create the starter project structure.
-- **Key prompt:** Prepare the workspace and initial HTML, CSS, JavaScript and project-note structure.
-- **What worked:** The template provided a clean base for the later SlopeSwap prototype.
-- **What broke, and how I fixed it:** The SlopeSwap idea had not been implemented yet, so I kept the template until the main development sessions.
-- **Committed?** yes — "Initial commit"
+- **Goal:** Create the starter course project structure.
+- **Key prompt:** Begin from the AI to Startup template and prepare the workspace.
+- **What worked:** The initial HTML, CSS, JavaScript, assets and project-notes structure were established.
+- **What broke, and how I fixed it:** The final SlopeSwap idea was not present yet, so the template remained until the prototype work began.
+- **Committed?** yes — `10709b7` — "Initial commit"
 
-### Session — 2026-11-25 afternoon — Started the prototype
+### Session — 2026-11-25 afternoon — Started and changed a lot
 
 - **Goal:** Replace the template startup with a used ski and snowboard marketplace.
 - **Key prompts:**
@@ -22,9 +22,9 @@
   2. "Add search, category and audience filters, saved listings, demo account gating, seller insights and listing submission."
 - **What worked:** The shared listing data and plain HTML, CSS and JavaScript created a consistent, interactive prototype. Browser `localStorage` preserved demo saves and listings.
 - **What broke, and how I fixed it:** The prototype required connected account, save and seller states rather than isolated pages. I used hash-based views and browser-local state.
-- **Committed?** yes — "started and changed a lot"
+- **Committed?** yes — `e853078` — "started and changed a lot"
 
-### Session — 2026-11-25 night — Finished the website
+### Session — 2026-11-26 night — Finished the website
 
 - **Goal:** Complete the major buyer and seller journeys.
 - **Key prompts:**
@@ -35,109 +35,124 @@
   5. "Add a Menu button on screens under 600px."
   6. "Add seller ratings to listing cards."
   7. "Add a Market insights panel on the Sell page."
-- **What worked:** The shop filters, saved gear, account-gated purchase requests, seller listings, market insights, photo previews and seller dashboard became interactive.
-- **What broke, and how I fixed it:** Incorrect helmet images were replaced with category-specific SVG assets. A signed-out Sell form was made to redirect to account creation and return to the listing. A wrapped mobile nav was replaced with a Menu button.
-- **Committed?** yes — "finished website"
+- **What worked:** The shop filtering, saved gear, account-gated purchase requests, seller listings, market insights, photo previews and seller dashboard became interactive.
+- **What broke, and how I fixed it:** Several listing cards showed the wrong helmet image. I added category-specific SVG assets. The signed-out Sell form stopped silently, so I added account-gating feedback and a redirect back to the seller form. The mobile nav wrapped and split "Create account", so I added a Menu button under 600px.
+- **Committed?** yes — `03091e6` — "finished website"
 
-### Session — 2026-11-26 — Project log
+### Session — 2026-11-26 — Project log and first correction
 
-- **Goal:** Organize the prototype work and document the implementation details.
+- **Goal:** Document the implemented prototype and correct the first project-log pass.
 - **Key prompts:**
   1. "Review the actual SlopeSwap prototype and fill the project log using its implemented buyer, seller and network-effect features."
-- **What worked:** The project log began recording prompts, sessions and real services that would be needed in production.
-- **What broke, and how I fixed it:** Reconstructing work could lose detail, so I used the commit history and current implementation to document the major outcomes.
-- **Committed?** yes — `8c64b39`
+  2. "Update the project logs with the session and previous commits."
+- **What worked:** `8c64b39` added the project-log structure and `460b979` corrected the work-session and commit organization.
+- **What broke, and how I fixed it:** The reconstructed session periods did not initially match the Git history closely enough, so I separated implementation and documentation periods.
+- **Committed?** yes — `8c64b39` and `460b979`
 
-### Session — 2026-11-26 — Edited project log
+### Session — 2026-11-26 — Updated founding-seller copy
 
-- **Goal:** Correct the first documentation pass and align session periods with the Git history.
-- **Key prompts:**
-  1. "Update the project logs with the session and the previous commits."
-- **What worked:** The log separated implementation periods from later documentation updates.
-- **What broke, and how I fixed it:** Earlier session information did not match the actual commit periods closely enough, so I revised and restructured it.
-- **Committed?** yes — `460b979`
-
-### Session — 2026-11-26 — Updated the founding-seller offer
-
-- **Goal:** Audit the prototype and replace the original three-sales fee offer.
+- **Goal:** Audit the prototype and change the founding-seller offer.
 - **Key prompts:**
   1. "change Founding sellers — No fees on your first 3 sales to after 3 sales 1 month free membership"
   2. "double check everything ive given you"
   3. "check all the previous work done on this website"
-- **What worked:** The banner now reads "After 3 sales: 1 month free membership," and the implementation copy was audited.
-- **What broke, and how I fixed it:** Temporary home-page background experiments did not belong in the finished site, so I removed them and restored the original styling.
+- **What worked:** The banner now reads "After 3 sales: 1 month free membership."
+- **What broke, and how I fixed it:** Temporary home-page background experiments did not belong in the finished design, so I removed them and restored the original styling.
 - **Committed?** yes — `254b9e6`
 
-### Session — 2026-11-26 — Expanded project documentation
+### Session — 2026-11-26 — Added project-log detail
 
-- **Goal:** Restore detail to the business case after it had been trimmed too aggressively.
+- **Goal:** Add a project-log work entry and reconcile later commit details.
+- **Key prompt:** "Update the project logs with the session and the previous commits."
+- **What worked:** The project log gained another documented work session and commit detail.
+- **Committed?** yes — `567e991`
+
+### Session — 2026-11-26 — Expanded the business case
+
+- **Goal:** Replace the template business-case prompt text with a substantive SlopeSwap answer.
 - **Key prompts:**
   1. "you trimmed it to much the grading rubric says 1500 words, expand back some of what u trimmed"
   2. "make sure to follow the initial setup of the business case from the template and keep the questions included"
-- **What worked:** The report regained detail across the idea, IT value, revenue, network effects, defensibility, operations and ethics.
-- **What broke, and how I fixed it:** One expanded draft became too long, later drafts were cut too far, and later work did not always preserve the template structure. I rewrote each section around the rubric questions and kept a concise version under 1,800 words.
-- **Committed?** yes — `567e991`, `c17a2ef`, `220e427`
+- **What worked:** `c17a2ef` filled the case with the idea, value chain, network effects, moat, cloud operations and risks.
+- **What broke, and how I fixed it:** The expanded draft became too long, so later revisions and trims restored a smaller, rubric-focused version.
+- **Committed?** yes — `c17a2ef`
 
-### Session — 2026-11-26 — Added VRIN and cold-start analysis
+### Session — 2026-11-26 — Added VRIN and shortened the report
 
-- **Goal:** Make the business defensibility and launch analysis more specific.
+- **Goal:** Make the moat and cold-start analysis more specific and continue tightening the report.
 - **Key prompts:**
   1. "Use the term VRIN and test sold-price data, seller ratings, assessors and condition process, and local partnerships against all four parts."
   2. "Say which advantages strengthen over time and why."
   3. "Add what a well-funded rival would need and how long copying would take."
   4. "Name the Shop page stats bar (248 sellers · 1,842 buyers · 18 listings) and the line 'More sellers means more choice…'"
   5. "Explain how the founding-seller offer helps get the first sellers."
-- **What worked:** The report gained a separate VRIN test for each resource, a strengthening-over-time explanation and a one-to-three-year rival timeline.
-- **What broke, and how I fixed it:** The earlier defensibility section was too general. I replaced it with explicit criteria and one-line verdicts, and I replaced vague network-effect wording with the exact prototype UI and line.
-- **Committed?** yes — `cb2c4fd`, `eb387e1`
+- **What worked:** `220e427` retained the long-form business case, `cb2c4fd` added exact network evidence and a complete VRIN section, and `eb387e1` updated the project log.
+- **Committed?** yes — `220e427`, `cb2c4fd`, `eb387e1`
 
-### Session — 2026-11-26 evening — Trimmed and finalized business case
+### Session — 2026-11-26 — Revised cold start and project-log summary
 
-- **Goal:** Finish the business case under 1,800 words while preserving the requested grading points.
+- **Goal:** Replace the later report summary and strengthen the exact cold-start and defensibility sections.
 - **Key prompts:**
-  1. "Make room, then add the AI-use line."
-  2. "Decide whether the seller, buyer or both pays and align revenue with the $12/$30/$96 memberships."
-  3. "Name operations, outbound logistics and service in the IT value-chain section."
-  4. "Remove the short duplicate founding-seller sentence."
-- **What worked:** The report retained the template structure, exact network evidence, four VRIN resources, cold-start plan, rival timeline and AI-use disclosure within 1,800 words.
-- **What broke, and how I fixed it:** The first trim dropped required analysis, while the expansion reached 2,782 words. I cut the Executive summary and tightened less critical wording; I also corrected revenue so the report matches the site.
+  1. "Name the exact prototype network-effect evidence."
+  2. "Explain how the founding-seller offer gets the first sellers."
+  3. "Remove irrelevant project-log summary material and fill in the team name."
+- **What worked:** `c6e6b69` removed the 17-point summary, set the team name, added real night-session breakages and added the exact VRIN/cold-start changes.
+- **Committed?** yes — `c6e6b69`
+
+### Session — 2026-11-26 evening — Finalized, trimmed and aligned the case
+
+- **Goal:** Finalize revenue, length, AI-use, moat, cloud-outage and value-chain details.
+- **Key prompts:**
+  1. "Decide whether the seller, buyer or both pays and align revenue with the $12/$30/$96 memberships."
+  2. "Shorten the Executive summary and keep the file below 1,800 words."
+  3. "Add the AI-use line."
+  4. "Name operations, outbound logistics and service in the IT value-chain section."
+  5. "Remove the short duplicate founding-seller sentence."
+- **What worked:** `267272b` added the membership decision and final requested report details; `fce5fd4` committed the report and log.
+- **What broke, and how I fixed it:** The first trims were not complete enough or cut too much, and later reports briefly exceeded 1,800 words. I preserved required VRIN and template sections and tightened the Executive summary.
 - **Committed?** yes — `267272b`, `fce5fd4`
 
-### Session — 2026-11-26 — Final documentation cleanup
+### Session — 2026-11-26 — Final business-case cleanup
 
-- **Goal:** Remove irrelevant project-log material and keep only useful implementation and grading details.
-- **Key prompts:**
-  1. "remove the stuff from the project log thats irrelevant"
-- **What worked:** The log became shorter and focused on implementation, breakages and real-system requirements.
-- **What broke, and how I fixed it:** It later lost the chronological Nov 26 sessions and business-case prompts, so those were restored with separate entries and commit matches.
-- **Committed?** pending in the next final documentation commit.
+- **Goal:** Remove duplicate or now-inaccurate text from the final report.
+- **What changed:** `146f71b` removed the AI-use line from the final business-case revision. `a493f74` changed the revenue model alignment, expanded the exact value-chain activities and removed the duplicate founding-seller paragraph in Sections 2–4.
+- **Committed?** yes — `146f71b`, `a493f74`
+
+### Session — 2026-11-26 — Project-log cleanup and restoration
+
+- **Goal:** Remove irrelevant project-log material, then restore details whose removal made the commit history unclear.
+- **What changed:** `825e2ad` replaced the project log with a shorter implementation log. `9a6383d` then restored the chronological Nov 26 sessions, key prompts, "what we tried" column and specific business lesson.
+- **Committed?** yes — `825e2ad`, `9a6383d`
 
 ## Previous commits
 
 | Commit | Summary |
 |---|---|
-| `10709b7` | Initial course template commit. |
-| `e853078` | Started and substantially changed the prototype. |
-| `03091e6` | Finished the website and added its major interactions. |
-| `8c64b39` | Added the project log. |
-| `460b979` | Edited the project log. |
+| `10709b7` | Added the initial course template and starter files. |
+| `e853078` | Replaced the template startup and added SlopeSwap listings and assets. |
+| `03091e6` | Finished the website, account, seller, saved-item and market-insight interactions. |
+| `8c64b39` | Added the first project-log documentation. |
+| `460b979` | Corrected and restructured the project log. |
 | `254b9e6` | Updated the founding-seller offer and removed temporary styling. |
-| `567e991` | Added project-log work. |
-| `c17a2ef` | Added the expanded business case. |
-| `220e427` | Updated the business case. |
-| `cb2c4fd` | Continued project documentation. |
-| `eb387e1` | Updated the project log. |
-| `267272b` | Edited the business case. |
-| `fce5fd4` | Finalized the business case and project log. |
-| `146f71b` | Continued final project updates. |
-| `a493f74` | Continued final project updates. |
+| `567e991` | Added another project-log work entry. |
+| `c17a2ef` | Replaced the business-case template text with the expanded SlopeSwap case. |
+| `220e427` | Updated and continued shortening the expanded business case. |
+| `cb2c4fd` | Added the exact Shop network evidence, founding-seller cold-start paragraph and VRIN rivalry analysis. |
+| `eb387e1` | Updated the project log for the business-case and VRIN work. |
+| `c6e6b69` | Removed the 17-point summary, filled the team name and corrected the night-session and breakage records. |
+| `267272b` | Added the final revenue, cold-start, AI-use, moat and cloud-outage edits and trimmed the report. |
+| `fce5fd4` | Finalized and committed the business case and project log. |
+| `146f71b` | Removed the AI-use line from the business-case revision. |
+| `a493f74` | Expanded value-chain IT sections and aligned revenue, membership and founding-seller wording with the site. |
+| `825e2ad` | Replaced the project log with a shorter implementation log and removed most repeated documentation sessions. |
+| `9a6383d` | Restored the chronological Nov 26 sessions, business-case prompts and detailed breakage table. |
 
 ## Things that broke
 
 | Date | What went wrong | What we tried | What finally fixed it |
 |---|---|---|---|
-| 2026-11-25 | Boot, pole and goggle listings showed the helmet picture. | I checked which listings used `protection.svg` and compared it with the category assets. | Separate SVG assets were added and assigned to the correct listings. |
-| 2026-11-25 | The signed-out Sell form stopped silently. | I tested the submit action and found that it stopped without feedback. | The form added account-gating feedback, redirected to account creation and returned to the listing. |
+| 2026-11-25 | Boot, pole and goggle listings showed the helmet picture. | I checked which listings used `protection.svg` and compared it with category assets. | Separate SVG assets were added and assigned to the correct listings. |
+| 2026-11-25 | The signed-out Sell form stopped silently. | I tested the submit action and found it stopped without feedback. | The form added account-gating feedback, redirected to account creation and returned to the listing. |
 | 2026-11-25 | The phone navigation wrapped and split "Create account". | I tried shrinking the text and reducing nav spacing. | A Menu button replaced the wrapped layout under 600px. |
 | 2026-11-26 | A temporary home-page background did not match the intended design. | I tried adjusting the temporary background change. | The change was removed and the original styling restored. |
 
@@ -148,8 +163,8 @@
 | Shared account authentication | Buyers and sellers need private, device-independent accounts and verification. | Medium; use managed authentication, server-side sessions and account recovery. |
 | Real database and synchronized listings | Users and devices need to share and update inventory. | Medium; use a managed relational database and API instead of `localStorage`. |
 | Payment processing and escrow | Purchases need refunds, fraud controls and protection for both sides. | Medium to high; integrate payments and build transaction, payout and dispute workflows. |
-| Shipping, tracking and returns | Sellers and buyers need predictable delivery and remedies for problems. | Medium; integrate shipping, address validation and tracking events. |
-| Assessment and safety checks | Buyers need confidence, while helmets and bindings require category-specific review. | High; recruit trained reviewers and define refusal and escalation procedures. |
+| Shipping, tracking and returns | Sellers and buyers need predictable delivery and remedies. | Medium; integrate shipping, address validation and tracking events. |
+| Assessment and safety checks | Buyers need confidence, while helmets and bindings require category-specific review. | High; recruit trained reviewers and define escalation and refusal procedures. |
 | Moderation and fraud prevention | Scams and abusive users require reporting, detection and human review. | Medium to high; combine account checks, moderation tools, human review and audit logs. |
 | Notifications | Users need updates about listing status, payment, shipment and disputes. | Low to medium; use managed email or SMS services. |
 | Customer support and operations staff | Disputes and safety issues cannot be handled by software alone. | High recurring cost; start small and expand with transaction volume. |
