@@ -134,7 +134,7 @@
   4. "Give each cloud choice a risk and response and expand the outage procedure."
 - **What worked:** The report now charges sellers a disclosed 10% commission after a successful sale, makes the first season free for founding sellers and adds same-side network effects, deeper VRIN reasons and separate cloud responses.
 - **What broke, and how I fixed it:** The old report left membership and seller payments unclear and called an old "after three sales" offer a cold-start solution. I replaced it with seller commission and first-season free access, and changed the matching site banner and account text.
-- **Committed?** pending — tonight's rubric-fix commit.
+- **Committed?** yes — `b626658` — "fix rubric and live project log"
 
 ## Previous commits
 
@@ -159,6 +159,7 @@
 | `825e2ad` | Replaced the project log with a shorter implementation log and removed most repeated documentation sessions. |
 | `9a6383d` | Restored the chronological Nov 26 sessions, business-case prompts and detailed breakage table. |
 | `d18e725` | Finalized and reconciled the project log, including the session structure and commit-history details. |
+| `b626658` | Applied the rubric fixes to revenue, cold start, VRIN, cloud operations and the live project log. |
 
 ## Things that broke
 
