@@ -28,6 +28,7 @@ The work below is reconstructed from the project's commit history.
 14. **Added interface feedback** — Added confirmation toasts, undo for saving, clearing filters and responsive mobile navigation.
 15. **Finished responsive styling** — Updated layout, cards, forms, navigation and status elements for the full SlopeSwap experience.
 16. **Prepared the project log** — Reconstructed the work sessions and documented what would need to become real in a production version.
+17. **Checked and refined the latest copy** — Audited the full website implementation and changed the founding-seller offer to “After 3 sales: 1 month free membership.”
 
 ## Work sessions
 
@@ -52,6 +53,27 @@ Copy this block for each session.
 - **What worked:** The finished page includes shop filtering, saved gear, account-gated purchase requests, seller listings, market insights, photo previews and a seller dashboard.
 - **What broke, and how we fixed it:** The fake account and payment flows could appear more real than they are, so the documentation records that they are browser-local demos and describes the real services a production version would need.
 - **Committed?** yes — commit message: "finished website"
+
+### Session — 2026-11-26 — website review and final copy update
+
+- **Goal for this session:** Double-check the existing SlopeSwap prototype, remove no-longer-wanted styling experiments, and update the founding-seller offer.
+- **Key prompts we gave Copilot** (paste the important ones):
+  4. "change Founding sellers — No fees on your first 3 sales to after 3 sales 1 month free membership"
+  5. "double check everything ive given you"
+  6. "check all the previous work done on this website"
+- **What worked:** The website audit confirmed that the HTML, JavaScript, CSS, assets and project documentation were consistent. The temporary home-page background experiments were undone, and the founding-seller banner was updated without changing other page styling or functionality.
+- **What broke, and how we fixed it:** The earlier background changes did not match the intended scope, so they were restored to the original styles and routing behavior. The final implementation is a one-line copy update in the sell-view banner.
+- **Committed?** not yet — the founding-seller copy change is an uncommitted working-tree edit.
+
+## Previous commits
+
+| Commit | Summary |
+|---|---|
+| `10709b7` | Initial course template commit. |
+| `e853078` | Started and substantially changed the prototype: added SlopeSwap concept, catalog, views, interactions, styles and project structure. |
+| `03091e6` | Finished the website: expanded listings and app behavior, seller and account flows, market insights, responsive styling and documentation. |
+| `8c64b39` | Added the project log. |
+| `460b979` | Edited the project log. |
 
 ---
 
