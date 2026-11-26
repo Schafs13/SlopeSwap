@@ -145,7 +145,13 @@
 - **What worked:** The Shop and stats now exclude paused and assessment-pending seller listings. Sign-out clears local purchase-request state and confirms the action; listing removal confirms; saved-item plurals, sale-time rounding and market-insight reset behavior were corrected. The business case follows the template's six questions and is 1,670 words. It distinguishes fictional browser-only demo behavior from proposed assessments, payments and shipping, and identifies the site's free-season fee scope as unresolved.
 - **What broke, and how I fixed it:** Reintroducing the template questions pushed an earlier draft over the word limit, so duplicated explanations were trimmed. The documents also risked implying that sample ratings, helmet listings and business-model fees were real; these are now explicitly identified as fictional or proposed.
 - **Validation:** `node --check app.js`, `git diff --check` and the unit-economics arithmetic passed.
-- **Committed?** no — the app and document changes remain uncommitted.
+- **Committed?** yes — `08f13ad`
+
+### Session — 2026-11-26 — Final report and interface check
+
+- **What changed:** Restored the AI-use disclosure, added active-listing stats and cumulative-data explanations, specified cloud risks and responses, clarified planned About-page services, and fixed mobile-menu and empty saved-button visibility.
+- **Validation:** The business case is 1,705 words, with Section 5 at 119 words. JavaScript syntax and diff formatting pass.
+- **Committed?** no — these follow-up changes remain uncommitted.
 
 ## Previous commits
 
@@ -174,6 +180,7 @@
 | `dac773e` | Recorded the rubric-fix commit hash in the live project-log session. |
 | `2bcff3b` | Completed the project-log commit audit. |
 | `dbddbbd` | Added the `2bcff3b` audit entry to the project-log commit table. |
+| `08f13ad` | Aligned the prototype and business case with prior feedback. |
 
 ## Things that broke
 

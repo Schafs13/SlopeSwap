@@ -165,6 +165,7 @@ h1 { line-height: 1.2; }
   border: 1px solid var(--brand);
   padding: 8px 14px;
 }
+#clear-saved[hidden] { display: none; }
 
 .audience-grid {
   display: grid;
@@ -674,7 +675,7 @@ h1 { line-height: 1.2; }
     flex-direction: column;
     gap: 0;
     padding: 8px 16px 14px;
-    background: var(--surface);
+    background: #fff;
     border-bottom: 1px solid var(--border);
     box-shadow: 0 12px 20px rgba(21, 49, 59, 0.12);
   }

@@ -6,7 +6,7 @@ Your prototype shows what the product looks like. This document explains why it 
 
 - **Customer:** Who exactly is it for?
 
-The primary buyer is a parent seeking the right size, fair price and reliable details; adults seeking lower-cost gear are another segment. Buyers may lack expertise on bindings, boot flex or helmet condition. Sellers are parents and riders with usable gear. General classifieds offer little category guidance or reach.
+The primary buyer is a parent seeking the right size and fair price; adults seeking lower-cost gear are another segment. Buyers may lack expertise about bindings, boot flex or helmet condition. Sellers are parents and riders with usable gear. General classifieds offer little category guidance.
 
 - **Problem:** What problem do they have today, and how do they solve it now?
 
@@ -35,7 +35,7 @@ These are illustrative, unmeasured assumptions. The $3.11 loss excludes customer
 
 One hypothesis is a disclosed $4.50 assessment fee in addition to the commission. It would yield about $1.39 contribution before fixed costs if collected separately and processing stays as modeled. Test willingness to pay and assessment time before adopting it; higher-value bundles, a higher rate or an unassessed tier are alternatives to test, not proven fixes.
 
-The model waives commission for founding sellers' first season, matching the site banner; assessment-fee coverage is unspecified. The demo collects no fees (its account form says no money will be charged). A live service must disclose fees and postage terms. Track per-order contribution, assessment time, conversion, support costs, disputes and repeat use—not page views or gross merchandise value.
+The model waives commission for founding sellers' first season, matching the site banner; whether assessment fees are waived is unspecified. The demo collects no fees. Disclose all live fees and postage terms; track per-order margin, assessment/support cost, conversion, disputes and repeat use—not page views.
 
 ## 2. Where IT creates value
 
@@ -64,6 +64,8 @@ This two-sided market has indirect network effects: more sellers increase buyer 
 
 Launch in one ski community. Recruit sellers first; use shops or parent groups for drop-off, assessment and inventory. **Free for the first season** lowers seller entry cost. Search data can reveal unmet demand; too many sellers can reduce listing visibility. Begin with a few categories and youth sizes.
 
+When a seller's listing becomes Active, the Shop stats bar adds it to the active-seller and listing counts.
+
 ## 4. Can it be copied? (the moat question)
 
 Anyone in this class could rebuild your website in a weekend with the same AI tool. So the code is **not** your competitive advantage.
@@ -79,15 +81,19 @@ The interface is easy to copy. **VRIN** tests whether a resource is valuable, ra
 - **Assessment process:** Consistent trained reviews can reduce uncertainty (**valuable**). Local expertise and decision records may be scarce, but checklists can be copied; building a reliable team takes time (**partly imitable**). Shop inspections and warranties are **substitutes**. A record of accurate decisions could improve training, but only if outcomes are monitored. **Verdict:** a differentiator only if quality is measured and consistent.
 - **Local partnerships:** Shop inventory, drop-off and referrals improve supply and convenience (**valuable**). Access is **rare** only when exclusive or meaningfully integrated; ordinary agreements are **imitable**. Other shops, pickup and carriers are **substitutes**. **Verdict:** useful leverage, otherwise replicable.
 
-Sales can strengthen data, reputation and assessment consistency only with sufficient volume. A funded rival could subsidize both sides, recruit assessors and build shop, carrier and support operations. Trusted inventory and relationships may take **one to three years** to build, but this is an estimate, not a proven barrier.
+Each completed sale adds a price point by gear size and condition; each documented assessment adds examples that can reveal errors and improve reviewer consistency. These records become more useful as accurate sales accumulate. A funded rival could subsidize both sides, recruit assessors and build shop, carrier and support operations. Trusted inventory and relationships may take **one to three years** to build, but this is an estimate, not a proven barrier.
 
 ## 5. Cloud and operations
 
 What would it take to run this for real? Which parts would you buy as cloud services (SaaS, PaaS, IaaS), and what are the risks of relying on them?
 
-The prototype uses browser `localStorage`; production needs hosting and a database (PaaS), photo storage (IaaS), and authentication, payment and shipping services (SaaS). Use MFA, recovery controls, tested backups, data exports and photo limits. Monitor fees, retain provider alternatives and keep a fallback carrier. Combine automated queues with trained moderation.
+The prototype uses `localStorage`; a real service needs PaaS hosting/database, IaaS photo storage, and SaaS authentication, payment and shipping.
 
-On payment or shipping failure, pause affected payouts, mark orders “processing” and notify both users. Retry or switch providers for up to 48 hours; then refund or rebook and document the resolution.
+- **PaaS risk:** Outage or lock-in; test backups/exports and an alternate deployment.
+- **IaaS risk:** Photo cost or outage; limit uploads, back up images and keep an export path.
+- **SaaS risk:** Breach, fees or outage; use MFA, least privilege and provider fallbacks.
+
+For payment or shipping failure, pause payouts, mark orders “processing” and notify users; retry or switch for 48 hours, then refund or rebook.
 
 ## 6. Risks and ethics
 
@@ -109,4 +115,6 @@ The prototype demonstrates search, saves, account gating and seller status, not 
 
 ## Conclusion
 
-SlopeSwap addresses gear search and trust, but viability depends on safe, reliable operations and positive transaction economics. Start locally and validate real demand, willingness to pay and repeat use. Any defensibility must come from trusted operations and accumulated data—not the easily copied interface.
+SlopeSwap addresses gear-search and trust problems, but viability depends on safe operations and positive transaction economics. Start locally and validate demand, willingness to pay and repeat use. Defensibility rests on operations and data, not code.
+
+AI use: Copilot drafted and edited this document from my prompts; Claude gave feedback against the rubric.
