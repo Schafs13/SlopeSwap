@@ -8,6 +8,27 @@ Keep this up to date as you go — a few lines per work session is enough. It's 
 
 ---
 
+## Summary of website changes
+
+The work below is reconstructed from the project's commit history.
+
+1. **Started from the course template** — Created the original HTML/CSS/JavaScript workspace and project-note structure.
+2. **Defined the SlopeSwap concept** — Replaced the sample startup data with the idea of a used ski and snowboard marketplace.
+3. **Built the initial catalog** — Added 18 realistic fake listings across skis, snowboards, boots, protection and accessories, along with product illustrations.
+4. **Created the home page journeys** — Added separate guidance for buyers and sellers, with links to shop, save or submit gear.
+5. **Added the shop experience** — Built listing cards plus search, category, audience and price/name sorting controls.
+6. **Added saved gear** — Added Save and undo actions, a saved-items view and a clear-saved control using browser local storage.
+7. **Added the demo account flow** — Added account creation and gated the purchase and seller actions behind a browser-local profile.
+8. **Added purchase requests** — Added buy/request buttons, a request-sent state and purchase-request counts.
+9. **Built the seller flow** — Added a seller form for item details, condition and asking price, plus demo photo upload previews.
+10. **Added market insights** — Calculated category price averages, typical sale times and suggested price ranges from the fake listings.
+11. **Added seller history and dashboard** — Added seller ratings, sales counts, listing status, selling controls and submitted-listing tracking.
+12. **Added network-effect messaging** — Added seller, buyer and active-listing stats plus text explaining how each side supports the other.
+13. **Added demo trust tools** — Added a photo-quality score, rating history and founding-seller offer; clearly labeled these as estimates or demos.
+14. **Added interface feedback** — Added confirmation toasts, undo for saving, clearing filters and responsive mobile navigation.
+15. **Finished responsive styling** — Updated layout, cards, forms, navigation and status elements for the full SlopeSwap experience.
+16. **Prepared the project log** — Reconstructed the work sessions and documented what would need to become real in a production version.
+
 ## Work sessions
 
 Copy this block for each session.
