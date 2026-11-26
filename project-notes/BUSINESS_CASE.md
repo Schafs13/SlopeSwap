@@ -20,21 +20,19 @@ The problem is both search and trust: a listing does not show unknown helmet imp
 
 ## 2. Where IT creates value
 
-Search, filters and saved listings support marketing and repeat visits. Seller dashboards and listing status reduce uncertainty, while ratings and sales counts provide quality signals.
+**Marketing and sales:** Search, filters and saved listings attract and convert buyers, while seller dashboards, submitted-listing status and market insights make selling easier. IT changes marketing by segmenting skis, snowboards, boots and protection by audience and size, and it changes sales by recording purchase requests and encouraging account activation.
 
-A shared database could maintain records for items, sellers, assessments, purchases and shipments. A production database, API and account system are necessary because the prototype cannot synchronize users or listings.
+**Operations:** A shared database could maintain records for items, sellers, assessments, purchases and shipments, replacing isolated browser data. Searchable inventory, standardized condition fields and audit logs improve transaction scale and consistency. The prototype currently calculates category averages and suggested price ranges from fake listings; production estimates should show sample size and remain non-guaranteed.
 
-Market insights can compare sold items by season, category, audience, size and condition. Estimates should show supporting sample size and be labeled as ranges, not guaranteed values. This prototype currently calculates category averages and suggested ranges from fake listings.
+**Outbound logistics:** Shipping labels, address validation, parcel tracking, insurance, delivery confirmation and returns could coordinate delivery and prove completion. These systems change outbound logistics from manual seller-buyer arrangements to tracked, auditable distribution. Shipment events would also trigger refund or dispute workflows.
 
-Shipping labels, address validation, parcel tracking, insurance, delivery confirmation and returns create a distribution channel and an audit trail for disputes. Customer service should allow reports, written decisions and appeals, with seller history supplemented by condition grades and moderator decisions.
-
-The most valuable features reduce uncertainty: matching fit, filtering unsafe items, supporting fair prices, preventing duplicate payments and detecting unusual accounts.
+**Service:** Ratings, sales counts and seller history give buyers quality signals. Reports, condition grades, written decisions and appeals give customers a structured support process. IT changes service by routing safety-sensitive issues to trained moderators, preserving records and making outcomes more consistent.
 
 ## 3. Revenue model and unit economics
 
 The proposed consumer prices are $12 per month, $30 per season or $96 per year. The season plan may suit an active winter cycle, while the annual plan may suit repeat families. These are hypotheses that require willingness-to-pay tests. SlopeSwap should test memberships, per-listing payments, transaction commissions or a combination.
 
-A membership may not suit a seller with one or two items. A per-sale commission may better align revenue with a completed outcome. Assisted sales could charge a disclosed fee for assessment, photography or shipping. SlopeSwap should charge the seller memberships and assisted-sale fees because these services directly support the seller, with no buyer fee unless clearly disclosed.
+The site makes $12 monthly, $30 seasonal or $96 annual membership the account-level revenue model for both buyer and seller use, so buyers need to activate a membership before buying and sellers use membership to retain access to selling features. A separate per-sale commission or assisted-sale fee could charge for assessment, photography or shipping, but any such fee should be clearly disclosed and tested; the prototype does not currently implement it.
 
 Direct costs include payments, disputes, assessment, packaging, shipping, support and cloud operations. Customer acquisition is expensive in a local two-sided market. A membership may not cover these costs if spending focuses on only one side.
 
@@ -47,8 +45,6 @@ SlopeSwap is a two-sided market with indirect network effects. More sellers prov
 The prototype demonstrates this in the **Shop page stats bar (248 sellers · 1,842 buyers · 18 listings)** and the line **“More sellers means more choice for buyers, and more buyers means faster sales for sellers.”** These figures are demonstrations, not real users. A real launch should begin in one or two ski communities with enough families and shops to serve several categories and youth sizes.
 
 The cold-start plan should recruit sellers before a broad buyer campaign. Shops and parent organizations could host drop-off or assessment events. SlopeSwap could publish inventory in a few popular categories and expand only after each category has credible choice.
-
-After 3 sales: 1 month free membership gives first sellers a visible incentive to join and complete sales before the local network is dense.
 
 The founding-seller offer helps get the first sellers: **after three completed sales, receive one month of free membership**. It gives sellers a reason to join before the market is dense and encourages activity through launch. Shops and parent groups can combine it with assessment events, giving sellers support and a plausible chance to sell. The reward activates after delivery or pickup and specifies eligibility, so it drives acquisition and completion, not merely listing activity.
 
