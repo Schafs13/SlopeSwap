@@ -55,6 +55,35 @@
 
   const accountGateMessage = document.getElementById("account-gate-message");
 
+  const menuToggle = document.getElementById("menu-toggle");
+  const mainNav = document.getElementById("main-nav");
+
+  function closeMenu() {
+    menuToggle.setAttribute("aria-expanded", "false");
+    menuToggle.setAttribute("aria-label", "Open menu");
+    mainNav.classList.remove("is-open");
+  }
+
+  menuToggle.addEventListener("click", function () {
+    const isOpen = menuToggle.getAttribute("aria-expanded") !== "true";
+    menuToggle.setAttribute("aria-expanded", String(isOpen));
+    menuToggle.setAttribute("aria-label", isOpen ? "Close menu" : "Open menu");
+    mainNav.classList.toggle("is-open", isOpen);
+  });
+
+  mainNav.addEventListener("click", function (event) {
+    if (event.target.closest("a")) {
+      closeMenu();
+    }
+  });
+
+  document.addEventListener("keydown", function (event) {
+    if (event.key === "Escape" && menuToggle.getAttribute("aria-expanded") === "true") {
+      closeMenu();
+      menuToggle.focus();
+    }
+  });
+
   function requireAccount(action) {
     if (accountProfile) {
       return true;
@@ -63,7 +92,7 @@
     pendingAccountAction = action;
     accountGateMessage.textContent = action.type === "seller"
       ? "Create a SlopeSwap account before submitting a listing. After sign-up, we'll return you to your listing so you can finish."
-      : "Create a SlopeSwap account before requesting to buy. After sign-up, your purchase request will be sent.";
+      : "Create a SlopeSwap account before buying. After sign-up, your purchase request will be sent.";
     accountGateMessage.hidden = false;
     window.location.hash = "#account";
     return false;
@@ -84,7 +113,7 @@
       view.hidden = view.id !== current;
     });
 
-    document.querySelectorAll("nav a").forEach(function (link) {
+    document.querySelectorAll(".site-header nav a, #account-link").forEach(function (link) {
       if (link.getAttribute("href") === "#" + current) {
         link.setAttribute("aria-current", "page");
       } else {
@@ -92,6 +121,7 @@
       }
     });
 
+    closeMenu();
     window.scrollTo(0, 0);
   }
 
@@ -113,6 +143,25 @@
   const categoryFilter = document.getElementById("category-filter");
   const audienceFilter = document.getElementById("audience-filter");
   const sortListings = document.getElementById("sort-listings");
+  const clearFilters = document.getElementById("clear-filters");
+  const sellerCategorySelect = document.querySelector('#seller-form [name="category"]');
+  const confirmationToast = document.getElementById("confirmation-toast");
+  const toastMessage = document.getElementById("toast-message");
+  const toastAction = document.getElementById("toast-action");
+  let toastTimer = null;
+
+  function showConfirmation(message, undoAction) {
+    window.clearTimeout(toastTimer);
+    toastMessage.textContent = message;
+    toastAction.hidden = typeof undoAction !== "function";
+    toastAction.onclick = typeof undoAction === "function"
+      ? undoAction
+      : null;
+    confirmationToast.hidden = false;
+    toastTimer = window.setTimeout(function () {
+      confirmationToast.hidden = true;
+    }, 5000);
+  }
 
   function makeCard(item) {
     const card = document.createElement("article");
@@ -161,9 +210,9 @@
     if (typeof item.price === "number") {
       const price = document.createElement("p");
       price.textContent = "$" + item.price + " · " + (item.condition || "Condition assessed");
-      card.append(tag, title, price, text);
+      card.append(tag, title, price, createSellerRating(item), text);
     } else {
-      card.append(tag, title, text);
+      card.append(tag, title, createSellerRating(item), text);
     }
 
     const isSaved = savedIds.indexOf(item.id) !== -1;
@@ -184,7 +233,7 @@
       requestButton.className = "button";
       requestButton.textContent = isRequested
         ? "Request sent ✓"
-        : accountProfile ? "Request to buy" : "Create account to request";
+        : accountProfile ? "Buy" : "Create account to buy";
       requestButton.disabled = isRequested;
       requestButton.addEventListener("click", function () {
         requestPurchase(item.id);
@@ -194,6 +243,19 @@
       card.append(actions);
     }
     return card;
+  }
+
+  function createSellerRating(item) {
+    const rating = document.createElement("p");
+    rating.className = "seller-rating";
+    if (typeof item.sellerRating === "number") {
+      const sales = Number.isInteger(item.sellerSales) ? item.sellerSales : 0;
+      rating.textContent = item.sellerRating.toFixed(1) + "★ · " + sales
+        + (sales === 1 ? " sale" : " sales");
+    } else {
+      rating.textContent = "New seller · 0 sales";
+    }
+    return rating;
   }
 
   function getBrowseListings() {
@@ -225,8 +287,57 @@
       getBrowseListings().length.toLocaleString();
   }
 
+  function updateMarketInsights() {
+    const category = sellerCategorySelect.value;
+    const categoryLabel = document.getElementById("market-insights-category");
+    const averagePrice = document.getElementById("market-average-price");
+    const saleTime = document.getElementById("market-sale-time");
+    const priceRange = document.getElementById("market-price-range");
+
+    if (!category) {
+      categoryLabel.textContent = "Choose a category to see insights.";
+      averagePrice.textContent = "—";
+      saleTime.textContent = "—";
+      priceRange.textContent = "—";
+      return;
+    }
+
+    const categoryListings = getBrowseListings().filter(function (item) {
+      return item.category === category && typeof item.price === "number";
+    });
+    const prices = categoryListings.map(function (item) { return item.price; });
+    const average = prices.reduce(function (total, price) {
+      return total + price;
+    }, 0) / prices.length;
+    const saleTimes = categoryListings
+      .filter(function (item) {
+        return typeof item.estimatedDaysToSell === "number";
+      })
+      .map(function (item) { return item.estimatedDaysToSell; })
+      .sort(function (a, b) { return a - b; });
+    const middle = Math.floor(saleTimes.length / 2);
+    const typicalDays = saleTimes.length % 2 === 0
+      ? (saleTimes[middle - 1] + saleTimes[middle]) / 2
+      : saleTimes[middle];
+
+    categoryLabel.textContent = category + " listings";
+    averagePrice.textContent = prices.length > 0
+      ? "$" + Math.round(average)
+      : "Not enough data";
+    saleTime.textContent = saleTimes.length > 0
+      ? typicalDays + (typicalDays === 1 ? " day" : " days")
+      : "Not enough data";
+    priceRange.textContent = prices.length > 0
+      ? "$" + Math.floor(average * 0.85) + "–$" + Math.ceil(average * 1.15)
+      : "Not enough data";
+  }
+
   function toggleSaved(id) {
-    if (savedIds.indexOf(id) === -1) {
+    const wasSaved = savedIds.indexOf(id) !== -1;
+    const listing = getBrowseListings().find(function (item) {
+      return item.id === id;
+    });
+    if (!wasSaved) {
       savedIds.push(id);
     } else {
       savedIds = savedIds.filter(function (savedId) { return savedId !== id; });
@@ -234,10 +345,25 @@
     storage.set("savedIds", savedIds);
     renderListings();
     renderSavedListings();
+    if (!wasSaved) {
+      showConfirmation(
+        (listing ? listing.name : "Item") + " saved.",
+        function () {
+          savedIds = savedIds.filter(function (savedId) { return savedId !== id; });
+          storage.set("savedIds", savedIds);
+          renderListings();
+          renderSavedListings();
+          showConfirmation("Save undone.");
+        }
+      );
+    } else {
+      showConfirmation("Save removed.");
+    }
   }
 
   function renderListings() {
     renderShopStats();
+    updateMarketInsights();
     const query = searchBox.value.trim().toLowerCase();
     const category = categoryFilter.value;
     const audience = audienceFilter.value;
@@ -274,6 +400,14 @@
   categoryFilter.addEventListener("change", renderListings);
   audienceFilter.addEventListener("change", renderListings);
   sortListings.addEventListener("change", renderListings);
+  clearFilters.addEventListener("click", function () {
+    searchBox.value = "";
+    categoryFilter.value = "";
+    audienceFilter.value = "";
+    sortListings.value = "featured";
+    renderListings();
+    searchBox.focus();
+  });
 
   function renderSavedListings() {
     const savedItems = getBrowseListings().filter(function (item) {
@@ -308,6 +442,8 @@
       purchaseRequests.push(id);
       storage.set("purchaseRequests", purchaseRequests);
       renderListings();
+      renderSavedListings();
+      showConfirmation("Purchase request sent.");
     }
   }
 
@@ -323,6 +459,7 @@
   const photoScore = document.getElementById("photo-score");
   const conditionSelect = sellerForm.querySelector('[name="condition"]');
   let selectedPhotos = [];
+  sellerCategorySelect.addEventListener("change", updateMarketInsights);
 
   function calculatePhotoGearScore(condition, photos) {
     const conditionScores = { Excellent: 88, Good: 74, Fair: 58 };
@@ -490,7 +627,16 @@
         });
         actions.append(removeButton);
 
-        card.append(tag, title, price, description, status, statusLabel, actions);
+        card.append(
+          tag,
+          title,
+          price,
+          createSellerRating(item),
+          description,
+          status,
+          statusLabel,
+          actions
+        );
         return card;
       })
     );
@@ -528,6 +674,8 @@
       photos: selectedPhotos,
       photoScore: photoScoreValue,
       scoreLabel: scoreLabel(photoScoreValue),
+      sellerRating: null,
+      sellerSales: 0,
       status: "Photo scanned; awaiting gear assessment",
       isNew: true,
       submittedAt: Date.now()
@@ -542,6 +690,7 @@
     renderSellerListings();
     renderListings();
     renderSavedListings();
+    showConfirmation("Listing submitted for assessment.");
   });
 
   // ----------------------------------------------------------

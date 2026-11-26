@@ -15,14 +15,15 @@
        ========================================================= -->
   <header class="site-header">
     <a class="brand" href="#home" id="brand-name">SlopeSwap</a>
-    <nav aria-label="Main">
+         <button class="menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Open menu">Menu</button>
+         <nav id="main-nav" aria-label="Main">
       <a href="#home">Home</a>
       <a href="#explore">Shop</a>
       <a href="#saved">Saved</a>
       <a href="#sell">Sell</a>
       <a href="#about">About</a>
-      <a class="account-link" href="#account" id="account-link">Create account</a>
     </nav>
+         <a class="account-link" href="#account" id="account-link">Create account</a>
   </header>
 
   <main>
@@ -52,18 +53,38 @@
       </div>
 
       <div class="audience-grid">
-        <article class="card">
-          <span class="tag">For buyers</span>
-          <h2>Find trusted used gear</h2>
-          <p>Shop condition-checked skis, snowboards, boots and protection.</p>
-          <a class="button secondary" href="#explore">Shop equipment</a>
-        </article>
-        <article class="card">
-          <span class="tag">For sellers</span>
-          <h2>Sell gear you no longer use</h2>
-          <p>Submit your item for assessment and let SlopeSwap arrange the sale and shipping.</p>
-          <a class="button secondary" href="#sell">Start a listing</a>
-        </article>
+        <div class="audience-path">
+          <article class="card">
+            <span class="tag">For buyers</span>
+            <h2>Find trusted used gear</h2>
+            <p>Shop condition-checked skis, snowboards, boots and protection.</p>
+            <a class="button secondary" href="#explore">Shop equipment</a>
+          </article>
+          <section class="path-guide" aria-labelledby="buyer-guide-title">
+            <h3 id="buyer-guide-title">How to buy</h3>
+            <ol>
+              <li>Browse the Shop and filter for gear that fits.</li>
+              <li>Save listings you want to come back to.</li>
+              <li>Choose Buy and create an account to send a purchase request.</li>
+            </ol>
+          </section>
+        </div>
+        <div class="audience-path">
+          <article class="card">
+            <span class="tag">For sellers</span>
+            <h2>Sell gear you no longer use</h2>
+            <p>Submit your item for assessment and let SlopeSwap arrange the sale and shipping.</p>
+            <a class="button secondary" href="#sell">Start a listing</a>
+          </article>
+          <section class="path-guide" aria-labelledby="seller-guide-title">
+            <h3 id="seller-guide-title">How to sell</h3>
+            <ol>
+              <li>Create an account and open the Sell page.</li>
+              <li>Add your gear details, condition, price and photos.</li>
+              <li>Submit for assessment, then track your listing status.</li>
+            </ol>
+          </section>
+        </div>
       </div>
 
     </section>
@@ -121,7 +142,12 @@
 
       <p class="muted" id="saved-count"></p>
       <div class="grid" id="listing-grid"></div>
-      <p class="empty" id="empty-message" hidden>Nothing matches your search.</p>
+      <div class="empty-state" id="empty-message" role="status" hidden>
+        <span class="empty-state-icon" aria-hidden="true">⌕</span>
+        <h2>No gear found</h2>
+        <p>Try a different search or clear your filters to see more listings.</p>
+        <button class="button secondary" id="clear-filters" type="button">Clear filters</button>
+      </div>
     </section>
 
     <!-- =======================================================
@@ -141,6 +167,11 @@
     <section id="sell" data-view hidden>
       <h1>Sell your gear</h1>
       <p class="muted">Create a demo listing. Submitted information stays in this browser.</p>
+      <p class="seller-history-note">Sellers keep their rating history on SlopeSwap.</p>
+      <aside class="founding-seller-banner" aria-label="Founding seller offer">
+        <span>Founding sellers</span>
+        <strong>No fees on your first 3 sales</strong>
+      </aside>
 
       <form class="seller-form" id="seller-form">
         <label>
@@ -158,6 +189,27 @@
             <option>Accessories</option>
           </select>
         </label>
+        <section class="market-insights" id="market-insights" aria-live="polite">
+          <div class="market-insights-heading">
+            <h2>Market insights</h2>
+            <p id="market-insights-category">Choose a category to see insights.</p>
+          </div>
+          <dl class="market-insights-stats">
+            <div>
+              <dt>Average listing price</dt>
+              <dd id="market-average-price">—</dd>
+            </div>
+            <div>
+              <dt>Typical sale time</dt>
+              <dd id="market-sale-time">—</dd>
+            </div>
+            <div>
+              <dt>Suggested price range</dt>
+              <dd id="market-price-range">—</dd>
+            </div>
+          </dl>
+          <p class="market-insights-note">Demo estimates from example listings, not actual market results.</p>
+        </section>
         <label>
           <span>Condition</span>
           <select name="condition" required>
@@ -273,6 +325,11 @@
   <footer class="site-footer">
     <p>Student prototype for BSAD 281 at St. Francis Xavier University. Not a real company — all data is fictional.</p>
   </footer>
+
+  <div class="toast" id="confirmation-toast" role="status" aria-live="polite" aria-atomic="true" hidden>
+    <span id="toast-message"></span>
+    <button class="toast-action" id="toast-action" type="button" hidden>Undo</button>
+  </div>
 
   <!-- Scripts load in this order: data first, then the code that uses it. -->
   <script src="data.js"></script>
