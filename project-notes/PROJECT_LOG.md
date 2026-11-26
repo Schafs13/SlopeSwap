@@ -29,6 +29,7 @@ The work below is reconstructed from the project's commit history.
 15. **Finished responsive styling** — Updated layout, cards, forms, navigation and status elements for the full SlopeSwap experience.
 16. **Prepared the project log** — Reconstructed the work sessions and documented what would need to become real in a production version.
 17. **Checked and refined the latest copy** — Audited the full website implementation and changed the founding-seller offer to “After 3 sales: 1 month free membership.”
+18. **Expanded the business case** — Restored detailed coverage of the idea, customer and IT value, revenue model, network effects, defensibility, cloud operations, risks and validation while targeting a more complete course submission.
 
 ## Work sessions
 
@@ -94,6 +95,15 @@ The work below is reconstructed from the project's commit history.
 - **What worked:** I audited the full website, confirmed that the core files and assets were consistent, and changed the banner to "After 3 sales: 1 month free membership."
 - **What broke, and how I fixed it:** I also removed temporary home-page background experiments that did not belong in the final site, preserving the original styling and routing behavior.
 - **Committed?** yes — worked some more
+
+### Session — 2026-11-26 — expanded project documentation
+
+- **Goal for this session:** I reviewed and expanded the SlopeSwap business case after feedback that the previous version had been trimmed too aggressively.
+- **Key prompts I gave Copilot** (important prompts from this work period):
+  1. "you trimmed it to much the grading rubric says 1500 words, expand back some of what u trimmed"
+- **What worked:** I restored substantial detail while keeping the final business case focused on the rubric topics and grounded in the implemented prototype.
+- **What broke, and how I fixed it:** The first expanded draft became too long. I reviewed the structure and rewrote it more concisely, preserving the central sections and evidence instead of simply adding padding.
+- **Committed?** no — documentation update in progress
 
 ## Previous commits
 
