@@ -700,7 +700,6 @@
   const accountProfileCard = document.getElementById("account-profile");
   const profileName = document.getElementById("profile-name");
   const profileEmail = document.getElementById("profile-email");
-  const profileMembership = document.getElementById("profile-membership");
   const accountLink = document.getElementById("account-link");
   const signOut = document.getElementById("sign-out");
 
@@ -710,7 +709,6 @@
       accountProfileCard.hidden = false;
       profileName.textContent = "Welcome, " + accountProfile.name;
       profileEmail.textContent = accountProfile.email;
-      profileMembership.textContent = "Membership: " + accountProfile.membership;
       accountLink.textContent = accountProfile.name;
     } else {
       accountForm.hidden = false;
@@ -725,8 +723,7 @@
 
     accountProfile = {
       name: formData.get("name").trim(),
-      email: formData.get("email").trim(),
-      membership: formData.get("membership")
+      email: formData.get("email").trim()
     };
     storage.set("accountProfile", accountProfile);
     renderAccount();

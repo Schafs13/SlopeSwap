@@ -46,7 +46,7 @@
   1. "Review the actual SlopeSwap prototype and fill the project log using its implemented buyer, seller and network-effect features."
   2. "Update the project logs with the session and previous commits."
 - **What worked:** `8c64b39` added the project-log structure and `460b979` corrected the work-session and commit organization.
-- **What broke, and how I fixed it:** The reconstructed session periods did not initially match the Git history closely enough, so I separated implementation and documentation periods.
+- **What broke, and how I fixed it:** I wrote this entry after the session using the commit history, and the first session periods did not match it closely enough, so I separated implementation and documentation periods.
 - **Committed?** yes — `8c64b39` and `460b979`
 
 ### Session — 2026-11-26 — Updated founding-seller copy
@@ -56,7 +56,7 @@
   1. "change Founding sellers — No fees on your first 3 sales to after 3 sales 1 month free membership"
   2. "double check everything ive given you"
   3. "check all the previous work done on this website"
-- **What worked:** The banner now reads "After 3 sales: 1 month free membership."
+- **What worked:** The original banner was audited and later updated to "Free for the first season" so founding sellers do not face an upfront joining cost.
 - **What broke, and how I fixed it:** Temporary home-page background experiments did not belong in the finished design, so I removed them and restored the original styling.
 - **Committed?** yes — `254b9e6`
 
@@ -124,6 +124,18 @@
 - **What changed:** `825e2ad` replaced the project log with a shorter implementation log. `9a6383d` then restored the chronological Nov 26 sessions, key prompts, "what we tried" column and specific business lesson.
 - **Committed?** yes — `825e2ad`, `9a6383d`
 
+### Session — 2026-11-26 evening — Applied the rubric fixes
+
+- **Goal:** Align the revenue model, cold-start offer and risk analysis with the prototype and term-project rubric.
+- **Key prompts:**
+  1. "Decide who pays and explain why, including whether a seller commission and assessment or shipping costs fit."
+  2. "Fix the founding-seller offer so the first sellers join free."
+  3. "Add same-side network effects and deepen the four VRIN tests."
+  4. "Give each cloud choice a risk and response and expand the outage procedure."
+- **What worked:** The report now charges sellers a disclosed 10% commission after a successful sale, makes the first season free for founding sellers and adds same-side network effects, deeper VRIN reasons and separate cloud responses.
+- **What broke, and how I fixed it:** The old report left membership and seller payments unclear and called an old "after three sales" offer a cold-start solution. I replaced it with seller commission and first-season free access, and changed the matching site banner and account text.
+- **Committed?** pending — tonight's rubric-fix commit.
+
 ## Previous commits
 
 | Commit | Summary |
@@ -146,6 +158,7 @@
 | `a493f74` | Expanded value-chain IT sections and aligned revenue, membership and founding-seller wording with the site. |
 | `825e2ad` | Replaced the project log with a shorter implementation log and removed most repeated documentation sessions. |
 | `9a6383d` | Restored the chronological Nov 26 sessions, business-case prompts and detailed breakage table. |
+| `d18e725` | Finalized and reconciled the project log, including the session structure and commit-history details. |
 
 ## Things that broke
 
@@ -155,6 +168,7 @@
 | 2026-11-25 | The signed-out Sell form stopped silently. | I tested the submit action and found it stopped without feedback. | The form added account-gating feedback, redirected to account creation and returned to the listing. |
 | 2026-11-25 | The phone navigation wrapped and split "Create account". | I tried shrinking the text and reducing nav spacing. | A Menu button replaced the wrapped layout under 600px. |
 | 2026-11-26 | A temporary home-page background did not match the intended design. | I tried adjusting the temporary background change. | The change was removed and the original styling restored. |
+| 2026-11-26 evening | Removing the buyer membership form left a stale account-page membership reference in the JavaScript. | I checked the account rendering code and compared it with the updated HTML. | I removed the profile-membership variable and text update, and changed the account button to "Create account". |
 
 ## What a real version would need
 
@@ -179,6 +193,8 @@
 
 3. **If a competitor had the same AI tool, how long would it take to copy the useful company?**
    The visible design could be copied in days or months. Trusted inventory, sellers, assessors, ratings and operating relationships would take roughly one to three years to establish.
+
+One concrete prompt that needed correction was "you trimmed it too much — expand it back." It caused the business case to grow to 2,782 words, even though the required format and length still needed a clear limit. I learned not to trust a longer answer without counting it, checking every rubric section and comparing the final text with the implemented site.
 
 ### Business lesson
 
