@@ -106,5 +106,3 @@ The business could become viable if it delivers the right gear, a condition grad
 Durable advantage would come from verified history, repeat sellers, assessment processes and local relationships. These assets could generate network effects and switching costs.
 
 AI lowers interface costs and helps competitors copy visible features. SlopeSwap's defensibility therefore depends on operations and data, not appearance. If it validates a safe, efficient local market, it could grow into a repeatable two-sided service that extends the useful life of winter-sport equipment.
-
-AI use: Copilot drafted and edited this document from my prompts; Claude gave feedback against the rubric.
