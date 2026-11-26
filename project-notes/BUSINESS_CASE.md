@@ -1,102 +1,112 @@
 # Business case
 
-## Executive summary
-
-SlopeSwap connects used-ski and snowboard buyers and sellers. Parents need fit and safety confidence; sellers need demand. General classifieds provide little specialized information.
-
-The prototype demonstrates buyer and seller journeys but not real demand. Viability requires trusted operations and a growing local network because competitors could copy the interface.
+Your prototype shows what the product looks like. This document explains why it could become a business. Refer to course concepts by name.
 
 ## 1. The idea
 
-The primary buyer is a parent seeking the correct size, fair price and confidence in the description. Many know little about bindings, boot flex or helmet safety. The secondary buyer is an adult seeking lower-cost gear.
+- **Customer:** Who exactly is it for?
 
-The primary seller is a parent or rider with usable gear that is no longer needed. Sellers must photograph it, describe its condition, answer questions and arrange delivery or pickup. General platforms may not reach someone seeking that youth size or category. SlopeSwap can organize listings and provide category-specific prompts.
+The primary buyer is a parent seeking the right size, fair price and reliable details; adults seeking lower-cost gear are another segment. Buyers may lack expertise on bindings, boot flex or helmet condition. Sellers are parents and riders with usable gear. General classifieds offer little category guidance or reach.
 
-Local ski shops could supply inventory and physical assessment or drop-off.
+- **Problem:** What problem do they have today, and how do they solve it now?
 
-The problem is both search and trust: a listing does not show unknown helmet impact history or whether bindings need adjustment. SlopeSwap should distinguish seller statements, estimates and verified checks. Its value proposition is: **used winter-sport gear, organized and assessed for families and riders, so buyers shop with less uncertainty and sellers reach relevant buyers**. It must not claim every item is safe if it has not inspected it.
+The problem combines search and trust: general classifieds or shop retail rarely provide category-specific information, and listings cannot establish helmet impact history or binding condition.
+
+- **Solution:** What does your product do differently or better?
+
+SlopeSwap organizes listings and separates seller claims, estimates and verified checks. Shops could provide inventory, drop-off or assessment. Its promise: **used winter-sport gear, organized and assessed to reduce uncertainty and help sellers reach buyers**. Never imply uninspected items are safe. The demo collects condition, prompts for size, limits photos and tracks assessment, active, paused and sold statuses; only Active seller listings appear in the Shop.
+
+The current site is a fictional, browser-only demo: profiles, saves, seller submissions and purchase-request status are local; it does not perform real inspections, process payments or arrange shipments. Those are planned services, not working features.
+
+- **Revenue:** How does the company make money?
+
+Avoid buyer memberships for infrequent, low-cost purchases. The proposal is a 10% seller commission after an accepted sale. At a $45 price, it cannot cover assessment and support:
+
+| Illustrative cost per order | Assumption | Cost |
+| --- | --- | ---: |
+| Sale price and 10% commission | One item sold for $45 | $4.50 revenue |
+| Payment processing | 2.9% + $0.30 of the $45 charge | $1.61 |
+| Assessment labor | 15 minutes at $18/hour | $4.50 |
+| Shipping support | Label and tracking assistance; postage excluded | $1.00 |
+| Refund/dispute reserve | Planning allowance per order | $0.50 |
+| **Contribution after these variable costs** | $4.50 − $7.61 | **−$3.11** |
+
+These are illustrative, unmeasured assumptions. The $3.11 loss excludes customer acquisition, insurance, taxes and fixed costs; postage is paid separately at cost, and any subsidy increases the loss. The commission would need to be about 16.9% to cover these variable costs alone.
+
+One hypothesis is a disclosed $4.50 assessment fee in addition to the commission. It would yield about $1.39 contribution before fixed costs if collected separately and processing stays as modeled. Test willingness to pay and assessment time before adopting it; higher-value bundles, a higher rate or an unassessed tier are alternatives to test, not proven fixes.
+
+The model waives commission for founding sellers' first season, matching the site banner; assessment-fee coverage is unspecified. The demo collects no fees (its account form says no money will be charged). A live service must disclose fees and postage terms. Track per-order contribution, assessment time, conversion, support costs, disputes and repeat use—not page views or gross merchandise value.
 
 ## 2. Where IT creates value
 
-**Marketing and sales:** Search, filters and saved listings attract and convert buyers, while seller dashboards, submitted-listing status and market insights make selling easier. IT changes marketing by segmenting skis, snowboards, boots and protection by audience and size, and it changes sales by recording purchase requests and encouraging account activation.
+Which parts of the value chain does your product change, and how? Which course concepts apply (e.g. scale, distribution channels, differentiation, data, switching costs)?
 
-**Operations:** A shared database could maintain records for items, sellers, assessments, purchases and shipments, replacing isolated browser data. Searchable inventory, standardized condition fields and audit logs improve transaction scale and consistency. The prototype currently calculates category averages and suggested price ranges from fake listings; production estimates should show sample size and remain non-guaranteed.
+Category checks differentiate the service; shared records support scale; shops can be distribution channels. Data may improve decisions; saves and ratings may support retention but do not prove switching costs.
 
-**Outbound logistics:** Shipping labels, address validation, parcel tracking, insurance, delivery confirmation and returns could coordinate delivery and prove completion. These systems change outbound logistics from manual seller-buyer arrangements to tracked, auditable distribution. Shipment events would also trigger refund or dispute workflows.
+**Marketing and sales:** Search, filters and saves help buyers find gear; seller dashboards and insights support listing and pricing. Category targeting and purchase requests support conversion.
 
-**Service:** Ratings, sales counts and seller history give buyers quality signals. Reports, condition grades, written decisions and appeals give customers a structured support process. IT changes service by routing safety-sensitive issues to trained moderators, preserving records and making outcomes more consistent.
+**Operations:** A shared database would replace browser-only data with searchable inventory and seller, assessment and transaction records. Audit history makes decisions traceable. Prototype price insights use fictional listings; real estimates need sample sizes and uncertainty labels.
 
-## 3. Revenue model and unit economics
+**Outbound logistics:** A production service could use labels, tracking and delivery confirmation to make shipping auditable and trigger dispute workflows.
 
-Buyers should not pay a membership fee. A parent buying one pair of youth boots should not need to commit to $12 each month, and a buyer fee would make a low-cost, infrequent purchase less attractive. Instead, sellers should pay a 10% commission only after SlopeSwap delivers a successful, accepted sale. The seller bears the fee because SlopeSwap creates the buyer, assessment, payment and shipping service that produces the outcome.
+**Service:** A production service could use verified sales, condition reports and appeals as buyer signals. Trained moderators would document decisions and handle safety-sensitive concerns consistently.
 
-Founding sellers receive no commission during their first season. The 10% fee would be held with the completed payment and disclosed before listing or checkout. It must cover assessment labor, payment fees, shipping support and disputes, with an assisted-sale fee or adjusted rate if needed.
+## 3. Network effects
 
-A repeatable transaction moves from submission through assessment, buyer conversion, payment and delivery to a rating. Measure listing-view conversion, completed transactions, seller activation, disputes, contribution margin and repeat use.
+Does your product get more valuable as more people use it?
 
-## 4. Network effects
+- Is it a **one-sided** or **two-sided** market? Who are the sides?
+- Where does the extra value come from as the network grows?
+- How would you solve the "empty network" problem at launch?
+- Point to the part of your prototype that shows this.
 
-SlopeSwap is a two-sided market with indirect network effects. More sellers provide buyer choice, while more buyers give sellers a reason to list. Growth on only one side creates stale listings or abandoned searches.
+This two-sided market has indirect network effects: more sellers increase buyer choice; more buyers increase seller demand. One-sided growth leaves stale listings or empty searches. Prototype evidence is the **Shop stats bar (248 sellers · 1,842 buyers · 18 listings)** and “More sellers means more choice for buyers, and more buyers means faster sales for sellers.” These are demo, not live, figures.
 
-The prototype demonstrates this in the **Shop page stats bar (248 sellers · 1,842 buyers · 18 listings)** and the line **“More sellers means more choice for buyers, and more buyers means faster sales for sellers.”** A real launch should begin in one ski community with families and shops serving several categories and youth sizes.
+Launch in one ski community. Recruit sellers first; use shops or parent groups for drop-off, assessment and inventory. **Free for the first season** lowers seller entry cost. Search data can reveal unmet demand; too many sellers can reduce listing visibility. Begin with a few categories and youth sizes.
 
-Recruit sellers before a broad buyer campaign. Shops and parent groups could host drop-off or assessment events and seed inventory in a few categories.
+## 4. Can it be copied? (the moat question)
 
-The **Founding sellers: free for the first season** offer lets sellers join before demand is dense, avoiding an empty-market barrier.
+Anyone in this class could rebuild your website in a weekend with the same AI tool. So the code is **not** your competitive advantage.
 
-Buyer searches reveal demand and successful sellers attract more sellers. More sellers may reduce individual visibility, while more buyers improve demand and the usefulness of ratings and price data.
+- What about your business is **valuable, rare, hard to imitate and well-organized** (VRIN)?
+- What would a competitor with a bigger budget need to copy you, and how long would it take?
+- Which of your advantages get *stronger* over time (data, network, brand, switching costs)?
 
-## 5. Can it be copied? (the moat)
+The interface is easy to copy. **VRIN** tests whether a resource is valuable, rare, hard to imitate and non-substitutable. The site displays fictional sample ratings but has no transaction history or verified-review workflow; users can multi-home, so these are potential advantages. Capturing value also requires consistent assessments, documented decisions and dispute handling—capabilities the prototype has not proven.
 
-The interface is easy to copy, so durable advantage must come from resources that become more valuable with use.
+- **Sold-price data:** Verified prices by size, condition and season can improve decisions (**valuable**). A deep local dataset may be **rare** and takes time to build, but rivals can collect sales data; price guides are **substitutes**. It needs enough comparable transactions and accuracy checks. **Verdict:** a temporary advantage only with dense, reliable data.
+- **Seller ratings:** Verified delivered-sale reviews can reduce uncertainty (**valuable**), but established marketplaces already have reviews (**not rare**). Competitors can implement them (**imitable**); guarantees and inspections are **substitutes**. Ratings create switching costs only when credible, useful and hard to transfer. Sellers can still multi-home, so these costs are limited. **Verdict:** supports trust, not a moat alone.
+- **Assessment process:** Consistent trained reviews can reduce uncertainty (**valuable**). Local expertise and decision records may be scarce, but checklists can be copied; building a reliable team takes time (**partly imitable**). Shop inspections and warranties are **substitutes**. A record of accurate decisions could improve training, but only if outcomes are monitored. **Verdict:** a differentiator only if quality is measured and consistent.
+- **Local partnerships:** Shop inventory, drop-off and referrals improve supply and convenience (**valuable**). Access is **rare** only when exclusive or meaningfully integrated; ordinary agreements are **imitable**. Other shops, pickup and carriers are **substitutes**. **Verdict:** useful leverage, otherwise replicable.
 
-Using **VRIN**, a resource must be valuable, rare, hard to imitate and non-substitutable:
+Sales can strengthen data, reputation and assessment consistency only with sufficient volume. A funded rival could subsidize both sides, recruit assessors and build shop, carrier and support operations. Trusted inventory and relationships may take **one to three years** to build, but this is an estimate, not a proven barrier.
 
-- **Sold-price data:** Accepted transactions improve forecasting. A large, verified history across sizes and seasons is valuable and rare; rivals can collect public or new data, so copying is hard mainly until exclusive history accumulates. Manufacturer catalogs and general marketplaces offer partial substitutes but lack accepted local prices. **Verdict:** strong only after real volume.
-- **Seller ratings:** Verified deliveries make ratings valuable and rare, and a rival cannot transfer non-resettable history. ID checks or guarantees partially substitute, but not a history of outcomes. **Verdict:** ratings create switching costs.
-- **Assessors and condition process:** Trained local staff and calibrated recall knowledge are valuable and rare. A rival can copy a checklist but not staff, records and judgment; personal inspection partially substitutes. **Verdict:** strong only if consistently applied.
-- **Local partnerships:** Shops provide inventory, drop-off, rates and credibility. A rival can sign the same shops, so relationships are rare only with better terms or integration. Remote carriers partially substitute, but not local trust or logistics. **Verdict:** valuable when exclusive or integrated.
+## 5. Cloud and operations
 
-Data, ratings and network size strengthen with real transactions and the assessment process improves through decision records.
+What would it take to run this for real? Which parts would you buy as cloud services (SaaS, PaaS, IaaS), and what are the risks of relying on them?
 
-A well-funded rival would need money to subsidize both sides, recruit and train assessors, establish carrier and shop partnerships, fund customer support and sustain low transaction density. It would also need real sales history, verified ratings and a willing user network. The interface and basic workflows could be copied in days or months, but trusted inventory, reputation, operating processes and relationships would take roughly **one to three years**.
+The prototype uses browser `localStorage`; production needs hosting and a database (PaaS), photo storage (IaaS), and authentication, payment and shipping services (SaaS). Use MFA, recovery controls, tested backups, data exports and photo limits. Monitor fees, retain provider alternatives and keep a fallback carrier. Combine automated queues with trained moderation.
 
-## 6. Cloud and operations
+On payment or shipping failure, pause affected payouts, mark orders “processing” and notify both users. Retry or switch providers for up to 48 hours; then refund or rebook and document the resolution.
 
-The static prototype uses `localStorage`; real accounts need PaaS hosting and managed databases, IaaS photo storage and SaaS authentication, payments and shipping. Authentication risk requires MFA and recovery controls. Payment SaaS could raise fees or block the service; exported records, provider alternatives and fee monitoring reduce lock-in. Database PaaS may lose or block access, so it needs tested backups and exports. Photo limits control IaaS cost; carrier abstraction and a standby provider reduce shipping disruption. Moderation combines automated queues with trained review.
+## 6. Risks and ethics
 
-If payments or shipping fail, freeze affected payouts, label transactions "processing," and notify both users. Retry or switch providers for up to 48 hours; then refund or rebook and document the outcome.
+What could go wrong—for your customers, their data, or society? What would you do about it?
 
-## 7. Risks and ethics
+**Safety:** The demo includes fictional helmet listings; their descriptions are not evidence of inspection. For a live service, use written category-specific assessment and recall checks, state inspection limits and obtain liability review. Prohibit used-helmet resale unless a qualified professional verifies no impact history. The photo score cannot detect hidden damage and is not an inspection.
 
-**Unsafe gear:** A written assessment policy, trained reviewers and recall checks reduce risk. SlopeSwap should state inspection limits and obtain legal review of liability.
+**Fraud and ratings:** Identity checks, payment holds, two-factor authentication and dispute escalation reduce risk. Check ownership; link reviews to completed sales, detect coordination and give new sellers a fair way to build history. Review reports and do not grant unlimited trust based on repeat sales.
 
-Used helmets should not be sold unless a documented professional inspection confirms that they have never sustained an impact; the safest default is to prohibit used-helmet resale. The photo-quality score should state that it cannot detect hidden damage and is not a safety inspection.
+**Privacy:** Minimize personal data, encrypt and restrict access, remove photo metadata where practical and set retention limits. Warn users not to post private documents or locations.
 
-**Fraud and authenticity:** Identity checks, escrow or holds, two-factor authentication, audit logs and dispute escalation can reduce fraud. Image checks, ownership evidence and account history can reduce counterfeit or misrepresented goods. Mass reporting should not permanently remove an item, and repeat sales should not grant unlimited trust.
+**Bias and sustainability:** Label estimates non-guaranteed, show their basis and test errors across category, audience and location. Use written moderation rules, quality checks and appeals. Reuse can lower waste and gear costs, particularly for children who quickly outgrow equipment.
 
-Ratings need fake-review detection and a way for new sellers to establish trustworthy history without permanent disadvantage. Reviews should connect to completed transactions, and moderators should investigate coordinated rating activity.
+### Validation plan
 
-**Privacy:** Collect only necessary account, payment, address and support data. Encrypt and restrict it, remove photo metadata where practical and warn users not to include private documents or locations. Retain records only for a stated purpose.
+Interview parents, coaches and sellers about sales, safety and willingness to pay. Run a paid local pilot to measure assessment cost, conversion, disputes, delivery and repeat use. Expand only when transactions are safe, contribution-positive and supply and demand are balanced.
 
-**Pricing and moderation bias:** Label price estimates non-guaranteed, show their basis and test for systematic error across category, audience and location. Use written policies, training, quality checks and appeals to reduce inconsistent moderation. Record decisions and analyze patterns.
-
-Extending gear reuse can reduce waste and make skiing cheaper, especially for children whose sizes change quickly.
-
-## 8. Validation plan
-
-First, interview parents, youth coaches and local sellers about recent sales, selling time, safety concerns and willingness to pay for assessment or shipping. Second, run a limited paid pilot in one community with real sellers and buyers to learn assessment cost, conversion and dispute frequency.
-
-Third, measure assessment time, sale completion, shipping delay, damage reports and repeat use. Do not expand until transactions are safe and economical. Fourth, expand only where supply and demand are balanced. Search and transaction data can reveal missing inventory and unprofitable categories.
-
-The prototype is useful for the first stage because it demonstrates search, saved gear, buyer gating and seller status, but it is not a live market. Success should be measured by completed transactions, contribution margin, disputes, repeat use and seller and buyer retention.
+The prototype demonstrates search, saves, account gating and seller status, not demand. Judge success by completed sales, contribution margin, disputes and retention; assess category economics separately.
 
 ## Conclusion
 
-SlopeSwap addresses fit, condition and trust problems. The prototype demonstrates buyer and seller journeys around search, saved listings, requests, seller submission and market insights.
-
-The business could become viable if it delivers the right gear, a condition grade, secure payment and reliable delivery or pickup. Revenue must reflect transaction economics rather than page views. A local launch and shop partnerships are more credible than immediate national expansion.
-
-Durable advantage would come from verified history, repeat sellers, assessment processes and local relationships. These assets could generate network effects and switching costs.
-
-AI lowers interface costs and helps competitors copy visible features. SlopeSwap's defensibility therefore depends on operations and data, not appearance. If it validates a safe, efficient local market, it could grow into a repeatable two-sided service that extends the useful life of winter-sport equipment.
+SlopeSwap addresses gear search and trust, but viability depends on safe, reliable operations and positive transaction economics. Start locally and validate real demand, willingness to pay and repeat use. Any defensibility must come from trusted operations and accumulated data—not the easily copied interface.

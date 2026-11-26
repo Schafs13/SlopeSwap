@@ -261,7 +261,7 @@
   function getBrowseListings() {
     const submittedSellerListings = sellerListings
       .filter(function (item) {
-        return item.status !== "Sold";
+        return item.status === "Active";
       })
       .map(function (item) {
         return Object.assign({}, item, {
@@ -277,7 +277,7 @@
   function renderShopStats() {
     const activeSellerCount = MARKET_STATS.activeSellers
       + sellerListings.filter(function (item) {
-        return item.status !== "Sold";
+        return item.status === "Active";
       }).length;
     document.getElementById("active-sellers").textContent =
       activeSellerCount.toLocaleString();
@@ -319,13 +319,14 @@
     const typicalDays = saleTimes.length % 2 === 0
       ? (saleTimes[middle - 1] + saleTimes[middle]) / 2
       : saleTimes[middle];
+    const roundedTypicalDays = Math.round(typicalDays);
 
     categoryLabel.textContent = category + " listings";
     averagePrice.textContent = prices.length > 0
       ? "$" + Math.round(average)
       : "Not enough data";
     saleTime.textContent = saleTimes.length > 0
-      ? typicalDays + (typicalDays === 1 ? " day" : " days")
+      ? roundedTypicalDays + (roundedTypicalDays === 1 ? " day" : " days")
       : "Not enough data";
     priceRange.textContent = prices.length > 0
       ? "$" + Math.floor(average * 0.85) + "–$" + Math.ceil(average * 1.15)
@@ -389,10 +390,12 @@
     emptyMessage.hidden = matches.length > 0;
     const savedText = savedIds.length === 0
       ? "No saved items"
-      : "You've saved " + savedIds.length + " item(s)";
+      : "You've saved " + savedIds.length
+        + (savedIds.length === 1 ? " item" : " items");
     const requestText = purchaseRequests.length === 0
       ? ""
-      : " · " + purchaseRequests.length + " purchase request(s)";
+      : " · " + purchaseRequests.length + " purchase request"
+        + (purchaseRequests.length === 1 ? "" : "s");
     savedCount.textContent = savedText + requestText;
   }
 
@@ -416,7 +419,8 @@
 
     savedSectionCount.textContent = savedItems.length === 0
       ? "No saved items"
-      : "You've saved " + savedItems.length + " item(s)";
+      : "You've saved " + savedItems.length
+        + (savedItems.length === 1 ? " item" : " items");
     savedGrid.replaceChildren.apply(savedGrid, savedItems.map(makeCard));
     savedEmpty.hidden = savedItems.length > 0;
     clearSaved.hidden = savedItems.length === 0;
@@ -460,6 +464,9 @@
   const conditionSelect = sellerForm.querySelector('[name="condition"]');
   let selectedPhotos = [];
   sellerCategorySelect.addEventListener("change", updateMarketInsights);
+  sellerForm.addEventListener("reset", function () {
+    window.setTimeout(updateMarketInsights, 0);
+  });
 
   function calculatePhotoGearScore(condition, photos) {
     const conditionScores = { Excellent: 88, Good: 74, Fair: 58 };
@@ -607,6 +614,7 @@
           renderSellerListings();
           renderListings();
           renderSavedListings();
+          showConfirmation("Listing removed.");
         });
         statusLabel.append(statusText, statusSelect);
 
@@ -745,10 +753,13 @@
   signOut.addEventListener("click", function () {
     accountProfile = null;
     storage.set("accountProfile", null);
+    purchaseRequests = [];
+    storage.set("purchaseRequests", purchaseRequests);
     accountForm.reset();
     renderAccount();
     renderListings();
     renderSavedListings();
+    showConfirmation("Signed out.");
   });
 
   // ----------------------------------------------------------

@@ -6,6 +6,8 @@
 
 ## Work sessions
 
+**Timing and record note:** This log is reconstructed from commit history, not a time tracker. The prototype work spans Nov 25–26 UTC; most committed report and log revisions are clustered on Nov 26, including commits around 17:18–17:53 and 22:02–23:08 UTC. Later follow-up work is listed below and remains uncommitted. These timestamps show concentrated work, not the number of hours spent. The commit summaries below describe changes retrospectively; several original commit subjects were unclear or placeholders, including "....." and "i think im donw." I have left the history unchanged; future commits should use descriptive messages.
+
 ### Session — 2026-11-01 — Initial commit
 
 - **Goal:** Create the starter course project structure.
@@ -24,7 +26,7 @@
 - **What broke, and how I fixed it:** The prototype required connected account, save and seller states rather than isolated pages. I used hash-based views and browser-local state.
 - **Committed?** yes — `e853078` — "started and changed a lot"
 
-### Session — 2026-11-26 night — Finished the website
+### Session — 2026-11-25–26 UTC — Finished the website
 
 - **Goal:** Complete the major buyer and seller journeys.
 - **Key prompts:**
@@ -132,9 +134,18 @@
   2. "Fix the founding-seller offer so the first sellers join free."
   3. "Add same-side network effects and deepen the four VRIN tests."
   4. "Give each cloud choice a risk and response and expand the outage procedure."
-- **What worked:** The report now charges sellers a disclosed 10% commission after a successful sale, makes the first season free for founding sellers and adds same-side network effects, deeper VRIN reasons and separate cloud responses.
+- **What worked:** The report proposes a disclosed 10% seller commission after an accepted sale and a commission-free first season for founding sellers, matching the site's offer banner. These are business-model proposals only: the demo does not collect fees or process payments. The report explains cross-side network effects and seller-side visibility pressure, deepens the VRIN analysis and addresses cloud-provider risks.
 - **What broke, and how I fixed it:** The old report left membership and seller payments unclear and called an old "after three sales" offer a cold-start solution. I replaced it with seller commission and first-season free access, and changed the matching site banner and account text.
 - **Committed?** yes — `b626658` — "fix rubric and live project log"
+
+### Session — 2026-11-26 — Aligned the prototype and business case
+
+- **Goal:** Fix listing visibility and feedback behavior, restore the original business-case questions within the word limit, and ensure the documents describe the current demo accurately.
+- **Key requests:** Show only active seller listings in the Shop; clear request state and confirm sign-out/removal; correct small display issues; keep the case near 1,500 words and below 1,800; align the project documents with the site and concept.
+- **What worked:** The Shop and stats now exclude paused and assessment-pending seller listings. Sign-out clears local purchase-request state and confirms the action; listing removal confirms; saved-item plurals, sale-time rounding and market-insight reset behavior were corrected. The business case follows the template's six questions and is 1,670 words. It distinguishes fictional browser-only demo behavior from proposed assessments, payments and shipping, and identifies the site's free-season fee scope as unresolved.
+- **What broke, and how I fixed it:** Reintroducing the template questions pushed an earlier draft over the word limit, so duplicated explanations were trimmed. The documents also risked implying that sample ratings, helmet listings and business-model fees were real; these are now explicitly identified as fictional or proposed.
+- **Validation:** `node --check app.js`, `git diff --check` and the unit-economics arithmetic passed.
+- **Committed?** no — the app and document changes remain uncommitted.
 
 ## Previous commits
 
@@ -162,14 +173,15 @@
 | `b626658` | Applied the rubric fixes to revenue, cold start, VRIN, cloud operations and the live project log. |
 | `dac773e` | Recorded the rubric-fix commit hash in the live project-log session. |
 | `2bcff3b` | Completed the project-log commit audit. |
+| `dbddbbd` | Added the `2bcff3b` audit entry to the project-log commit table. |
 
 ## Things that broke
 
 | Date | What went wrong | What we tried | What finally fixed it |
 |---|---|---|---|
-| 2026-11-25 | Boot, pole and goggle listings showed the helmet picture. | I checked which listings used `protection.svg` and compared it with category assets. | Separate SVG assets were added and assigned to the correct listings. |
-| 2026-11-25 | The signed-out Sell form stopped silently. | I tested the submit action and found it stopped without feedback. | The form added account-gating feedback, redirected to account creation and returned to the listing. |
-| 2026-11-25 | The phone navigation wrapped and split "Create account". | I tried shrinking the text and reducing nav spacing. | A Menu button replaced the wrapped layout under 600px. |
+| 2026-11-25–26 UTC | Boot, pole and goggle listings showed the helmet picture. | I checked which listings used `protection.svg` and compared it with category assets. | Separate SVG assets were added and assigned to the correct listings. |
+| 2026-11-25–26 UTC | The signed-out Sell form stopped silently. | I tested the submit action and found it stopped without feedback. | The form added account-gating feedback, redirected to account creation and returned to the listing. |
+| 2026-11-25–26 UTC | The phone navigation wrapped and split "Create account". | I tried shrinking the text and reducing nav spacing. | A Menu button replaced the wrapped layout under 600px. |
 | 2026-11-26 | A temporary home-page background did not match the intended design. | I tried adjusting the temporary background change. | The change was removed and the original styling restored. |
 | 2026-11-26 evening | Removing the buyer membership form left a stale account-page membership reference in the JavaScript. | I checked the account rendering code and compared it with the updated HTML. | I removed the profile-membership variable and text update, and changed the account button to "Create account". |
 
