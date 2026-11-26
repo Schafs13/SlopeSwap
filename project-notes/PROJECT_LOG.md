@@ -39,17 +39,78 @@
 - **What broke, and how I fixed it:** Incorrect helmet images were replaced with category-specific SVG assets. A signed-out Sell form was made to redirect to account creation and return to the listing. A wrapped mobile nav was replaced with a Menu button.
 - **Committed?** yes — "finished website"
 
-### Session — 2026-11-26 — Updated copy and documentation
+### Session — 2026-11-26 — Project log
 
-- **Goal:** Refine the founding-seller offer and add the business-case and project-log documentation.
+- **Goal:** Organize the prototype work and document the implementation details.
 - **Key prompts:**
-  1. "Change Founding sellers — No fees on your first 3 sales to after 3 sales 1 month free membership."
-  2. "Test the site's implementation and fill in the project notes."
-  3. "Add a VRIN test for sold-price data, seller ratings, assessors and condition process, and local partnerships."
-  4. "Name the exact Shop page stats bar and network-effect line."
-- **What worked:** The project log and business case now describe the prototype, cold-start strategy, competitive advantage and real implementation gaps.
-- **What broke, and how I fixed it:** An initial business-case draft was too short, and later drafts were too long or did not test the VRIN resources systematically. I revised the structure and cut it to under 1,800 words.
-- **Committed?** yes — documentation and final business-case commits, including `267272b`.
+  1. "Review the actual SlopeSwap prototype and fill the project log using its implemented buyer, seller and network-effect features."
+- **What worked:** The project log began recording prompts, sessions and real services that would be needed in production.
+- **What broke, and how I fixed it:** Reconstructing work could lose detail, so I used the commit history and current implementation to document the major outcomes.
+- **Committed?** yes — `8c64b39`
+
+### Session — 2026-11-26 — Edited project log
+
+- **Goal:** Correct the first documentation pass and align session periods with the Git history.
+- **Key prompts:**
+  1. "Update the project logs with the session and the previous commits."
+- **What worked:** The log separated implementation periods from later documentation updates.
+- **What broke, and how I fixed it:** Earlier session information did not match the actual commit periods closely enough, so I revised and restructured it.
+- **Committed?** yes — `460b979`
+
+### Session — 2026-11-26 — Updated the founding-seller offer
+
+- **Goal:** Audit the prototype and replace the original three-sales fee offer.
+- **Key prompts:**
+  1. "change Founding sellers — No fees on your first 3 sales to after 3 sales 1 month free membership"
+  2. "double check everything ive given you"
+  3. "check all the previous work done on this website"
+- **What worked:** The banner now reads "After 3 sales: 1 month free membership," and the implementation copy was audited.
+- **What broke, and how I fixed it:** Temporary home-page background experiments did not belong in the finished site, so I removed them and restored the original styling.
+- **Committed?** yes — `254b9e6`
+
+### Session — 2026-11-26 — Expanded project documentation
+
+- **Goal:** Restore detail to the business case after it had been trimmed too aggressively.
+- **Key prompts:**
+  1. "you trimmed it to much the grading rubric says 1500 words, expand back some of what u trimmed"
+  2. "make sure to follow the initial setup of the business case from the template and keep the questions included"
+- **What worked:** The report regained detail across the idea, IT value, revenue, network effects, defensibility, operations and ethics.
+- **What broke, and how I fixed it:** One expanded draft became too long, later drafts were cut too far, and later work did not always preserve the template structure. I rewrote each section around the rubric questions and kept a concise version under 1,800 words.
+- **Committed?** yes — `567e991`, `c17a2ef`, `220e427`
+
+### Session — 2026-11-26 — Added VRIN and cold-start analysis
+
+- **Goal:** Make the business defensibility and launch analysis more specific.
+- **Key prompts:**
+  1. "Use the term VRIN and test sold-price data, seller ratings, assessors and condition process, and local partnerships against all four parts."
+  2. "Say which advantages strengthen over time and why."
+  3. "Add what a well-funded rival would need and how long copying would take."
+  4. "Name the Shop page stats bar (248 sellers · 1,842 buyers · 18 listings) and the line 'More sellers means more choice…'"
+  5. "Explain how the founding-seller offer helps get the first sellers."
+- **What worked:** The report gained a separate VRIN test for each resource, a strengthening-over-time explanation and a one-to-three-year rival timeline.
+- **What broke, and how I fixed it:** The earlier defensibility section was too general. I replaced it with explicit criteria and one-line verdicts, and I replaced vague network-effect wording with the exact prototype UI and line.
+- **Committed?** yes — `cb2c4fd`, `eb387e1`
+
+### Session — 2026-11-26 evening — Trimmed and finalized business case
+
+- **Goal:** Finish the business case under 1,800 words while preserving the requested grading points.
+- **Key prompts:**
+  1. "Make room, then add the AI-use line."
+  2. "Decide whether the seller, buyer or both pays and align revenue with the $12/$30/$96 memberships."
+  3. "Name operations, outbound logistics and service in the IT value-chain section."
+  4. "Remove the short duplicate founding-seller sentence."
+- **What worked:** The report retained the template structure, exact network evidence, four VRIN resources, cold-start plan, rival timeline and AI-use disclosure within 1,800 words.
+- **What broke, and how I fixed it:** The first trim dropped required analysis, while the expansion reached 2,782 words. I cut the Executive summary and tightened less critical wording; I also corrected revenue so the report matches the site.
+- **Committed?** yes — `267272b`, `fce5fd4`
+
+### Session — 2026-11-26 — Final documentation cleanup
+
+- **Goal:** Remove irrelevant project-log material and keep only useful implementation and grading details.
+- **Key prompts:**
+  1. "remove the stuff from the project log thats irrelevant"
+- **What worked:** The log became shorter and focused on implementation, breakages and real-system requirements.
+- **What broke, and how I fixed it:** It later lost the chronological Nov 26 sessions and business-case prompts, so those were restored with separate entries and commit matches.
+- **Committed?** pending in the next final documentation commit.
 
 ## Previous commits
 
@@ -73,12 +134,12 @@
 
 ## Things that broke
 
-| Date | What went wrong | What finally fixed it |
-|---|---|---|
-| 2026-11-25 | Boot, pole and goggle listings showed the helmet picture. | Separate SVG assets were added and assigned to the correct listings. |
-| 2026-11-25 | The signed-out Sell form stopped silently. | The form added account-gating feedback, redirected to account creation and returned to the listing. |
-| 2026-11-25 | The phone navigation wrapped and split "Create account". | A Menu button replaced the wrapped layout under 600px. |
-| 2026-11-26 | A temporary home-page background did not match the intended design. | The temporary change was removed and the original styling restored. |
+| Date | What went wrong | What we tried | What finally fixed it |
+|---|---|---|---|
+| 2026-11-25 | Boot, pole and goggle listings showed the helmet picture. | I checked which listings used `protection.svg` and compared it with the category assets. | Separate SVG assets were added and assigned to the correct listings. |
+| 2026-11-25 | The signed-out Sell form stopped silently. | I tested the submit action and found that it stopped without feedback. | The form added account-gating feedback, redirected to account creation and returned to the listing. |
+| 2026-11-25 | The phone navigation wrapped and split "Create account". | I tried shrinking the text and reducing nav spacing. | A Menu button replaced the wrapped layout under 600px. |
+| 2026-11-26 | A temporary home-page background did not match the intended design. | I tried adjusting the temporary background change. | The change was removed and the original styling restored. |
 
 ## What a real version would need
 
@@ -106,4 +167,4 @@
 
 ### Business lesson
 
-AI made the interface nearly free to build and copy. SlopeSwap's useful advantage would come from buyer and seller networks, trusted condition checks and reliable operations rather than code alone.
+AI made the interface nearly free to build and copy: for example, Copilot added 18 realistic listings in minutes, while getting the sign-in rules right took several tries. SlopeSwap's real advantage would come from buyer and seller networks, trusted condition checks and reliable operations rather than code alone.
