@@ -151,7 +151,7 @@
 
 - **What changed:** Restored the AI-use disclosure, added active-listing stats and cumulative-data explanations, specified cloud risks and responses, clarified planned About-page services, and fixed mobile-menu and empty saved-button visibility.
 - **Validation:** The business case is 1,705 words, with Section 5 at 119 words. JavaScript syntax and diff formatting pass.
-- **Committed?** no — these follow-up changes remain uncommitted.
+- **Committed?** yes — `33d787c`, `59de033`
 
 ## Previous commits
 
@@ -181,6 +181,8 @@
 | `2bcff3b` | Completed the project-log commit audit. |
 | `dbddbbd` | Added the `2bcff3b` audit entry to the project-log commit table. |
 | `08f13ad` | Aligned the prototype and business case with prior feedback. |
+| `33d787c` | Committed the final report, interface and project-log updates. |
+| `59de033` | Tightened the business-case AI-use disclosure wording. |
 
 ## Things that broke
 
