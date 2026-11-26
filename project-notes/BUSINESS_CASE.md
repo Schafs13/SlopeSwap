@@ -2,13 +2,11 @@
 
 ## Executive summary
 
-SlopeSwap is a two-sided marketplace for used ski and snowboard gear. Parents and riders repeatedly need or sell items as children outgrow equipment or riders stop using it. General classifieds provide little specialized fit, price or safety information.
+SlopeSwap connects used-ski and snowboard buyers and sellers. Parents need fit, price and safety confidence; sellers need demand. General classifieds provide little specialized information.
 
-Buyers could search, filter, save and request gear; sellers could provide photos and condition information, receive pricing guidance and track listings. Assessors, secure payments and shipping would connect the transaction.
+The prototype demonstrates buyer and seller journeys but not real demand.
 
-The prototype has 18 fake listings across skis, snowboards, boots, protection and accessories, plus search, saved gear, account gating, purchase requests, seller submission and market insights. Demo data proves the interface concept, not demand or completed sales.
-
-SlopeSwap could become viable through customer need, information technology, network effects and trusted operations. Because competitors could copy the interface, durable value must come from relationships, verified history, condition processes and a growing network.
+Viability requires trusted operations and a growing local network, because competitors could copy the interface.
 
 ## 1. The idea
 
@@ -36,7 +34,7 @@ The most valuable features reduce uncertainty: matching fit, filtering unsafe it
 
 The proposed consumer prices are $12 per month, $30 per season or $96 per year. The season plan may suit an active winter cycle, while the annual plan may suit repeat families. These are hypotheses that require willingness-to-pay tests. SlopeSwap should test memberships, per-listing payments, transaction commissions or a combination.
 
-A membership may not suit a seller with one or two items. A per-sale commission may better align revenue with a completed outcome. Assisted sales could charge a disclosed fee for assessment, photography or shipping. SlopeSwap should clearly identify who pays.
+A membership may not suit a seller with one or two items. A per-sale commission may better align revenue with a completed outcome. Assisted sales could charge a disclosed fee for assessment, photography or shipping. SlopeSwap should charge the seller memberships and assisted-sale fees because these services directly support the seller, with no buyer fee unless clearly disclosed.
 
 Direct costs include payments, disputes, assessment, packaging, shipping, support and cloud operations. Customer acquisition is expensive in a local two-sided market. A membership may not cover these costs if spending focuses on only one side.
 
@@ -50,6 +48,8 @@ The prototype demonstrates this in the **Shop page stats bar (248 sellers · 1,8
 
 The cold-start plan should recruit sellers before a broad buyer campaign. Shops and parent organizations could host drop-off or assessment events. SlopeSwap could publish inventory in a few popular categories and expand only after each category has credible choice.
 
+After 3 sales: 1 month free membership gives first sellers a visible incentive to join and complete sales before the local network is dense.
+
 The founding-seller offer helps get the first sellers: **after three completed sales, receive one month of free membership**. It gives sellers a reason to join before the market is dense and encourages activity through launch. Shops and parent groups can combine it with assessment events, giving sellers support and a plausible chance to sell. The reward activates after delivery or pickup and specifies eligibility, so it drives acquisition and completion, not merely listing activity.
 
 Buyer searches reveal demand, seller success attracts additional sellers, sold-price history improves estimates and accumulated ratings build trust.
@@ -60,7 +60,7 @@ The interface is easy to copy, so durable advantage must come from resources tha
 
 Using **VRIN**, a resource must be valuable, rare, hard to imitate and non-substitutable:
 
-- **Sold-price data:** Valuable for forecasting, pricing and inventory matching. Accepted transactions by category, size and season are rare and superior to asking prices. Rivals cannot copy verified history at launch, and real sales take time. **Verdict:** strong with volume, weak when sparse.
+- **Sold-price data:** Valuable for forecasting, pricing and inventory matching. Accepted transactions by category, size and season are rare and superior to asking prices. Rivals cannot copy verified history at launch, and real sales take time. **Verdict:** strong with volume, weak when sparse, and broader market or manufacturer prices may partially substitute.
 - **Seller ratings:** Valuable for choice and moderation and rare when accumulated across deliveries. Rivals cannot transfer or quickly reproduce this history; reviews or payments may substitute in limited cases. SlopeSwap must prevent account deletion or re-registration from erasing poor behavior. **Verdict:** ratings create switching costs.
 - **Assessors and condition process:** Valuable for reducing unsafe listings and improving consistency. Local reviewers with recall knowledge are rare. A rival can copy a checklist but not trained staff, recorded decisions, controls and judgment; photo analysis is a limited substitute. **Verdict:** strong only with consistent application.
 - **Local partnerships:** Valuable for inventory, drop-off, acquisition and credibility. Trusted relationships are rare and harder to imitate than advertising, though similar partners could eventually be signed. Remote carriers cannot replace physical presence and community trust. **Verdict:** valuable but less durable unless exclusive or integrated.
@@ -76,6 +76,8 @@ The prototype is a static front end using browser `localStorage`. It cannot sync
 Managed services add cost and vendor lock-in. Contracts should support export, deletion and recovery. Each listing needs a server-side record, assessment state and publication decision. Purchase requests should become payments or holds, and shipment events should trigger delivery, refund or disputes with audit logs.
 
 Moderation should combine automation and human judgment. Automated tools can queue duplicate photos, suspicious language or unusual accounts. A moderator should decide safety-sensitive helmet, binding, recall or damage cases, with two-person approval for removal or high-value refunds. Users should receive reasons and an appeal route.
+
+If a payment or shipping provider goes down, SlopeSwap would pause affected transactions and notify users until service resumes.
 
 ## 7. Risks and ethics
 
@@ -104,3 +106,5 @@ The business could become viable if it delivers the right gear, a condition grad
 Durable advantage would come from verified history, repeat sellers, assessment processes and local relationships. These assets could generate network effects and switching costs.
 
 AI lowers interface costs and helps competitors copy visible features. SlopeSwap's defensibility therefore depends on operations and data, not appearance. If it validates a safe, efficient local market, it could grow into a repeatable two-sided service that extends the useful life of winter-sport equipment.
+
+AI use: Copilot drafted and edited this document from my prompts; Claude gave feedback against the rubric.

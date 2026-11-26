@@ -101,6 +101,18 @@ Keep this up to date as you go — a few lines per work session is enough. It's 
 - **What broke, and how I fixed it:** The previous wording described network evidence and the offer too generally. I replaced it with exact UI details and a concrete explanation of recruiting sellers through the reward, shop partnerships and assessment events.
 - **Committed?** yes — commit `cb2c4fd` and `eb387e1`
 
+### Session — 2026-11-26 evening — trimmed and finalized business case
+
+- **Goal for this session:** I finalized the business case with the requested revenue decision, cold-start offer, AI-use disclosure and operational and moat details while keeping it under 1,800 words.
+- **Key prompts I gave Copilot** (important prompts from this work period):
+  1. "Expand and clarify the business case, including VRIN, cold start, rival copying, and the exact prototype network evidence."
+  2. "Trim the business case to 1,500 words, then keep it below 1,800 words."
+  3. "Follow the initial business-case template structure and keep all required questions."
+  4. "Decide who pays; explain the founding-seller offer; shorten the Executive summary; add the AI-use line; polish the moat and provider-outage plan."
+- **What worked:** I got the business case under 1,800 words and retained a VRIN test for sold-price data, seller ratings, assessors and condition process, and local partnerships.
+- **What broke, and how I fixed it:** The first trim cut too much and dropped the VRIN table, and the expansion later reached 2,782 words. I fixed this by cutting the Executive summary, validation plan and conclusion until the report was concise and all required information remained.
+- **Committed?** yes — "edited case"
+
 ## Previous commits
 
 | Commit | Summary |
@@ -116,6 +128,7 @@ Keep this up to date as you go — a few lines per work session is enough. It's 
 | `220e427` | Updated the business case. |
 | `cb2c4fd` | Continued the project-log and documentation work. |
 | `eb387e1` | Updated the project log. |
+| `267272b` | Edited the business case. |
 
 ---
 
