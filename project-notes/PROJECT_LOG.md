@@ -32,38 +32,68 @@ The work below is reconstructed from the project's commit history.
 
 ## Work sessions
 
-Copy this block for each session.
+### Session — 2026-11-01 — Initial commit
 
-### Session — 2026-11-25 — driver: project team
+- **Goal for this session:** I started the course project by creating the initial website template and project structure.
+- **Key prompts I gave Copilot:** I began with the starter repository and prepared the workspace for a new startup prototype.
+- **What worked:** I established the initial HTML, CSS, JavaScript and project-notes structure that the later SlopeSwap work could build on.
+- **What broke, and how I fixed it:** I had not yet added the SlopeSwap concept or the later interactive features, so I left the template in place until the implementation sessions began.
+- **Committed?** yes — commit message: "Initial commit"
 
-- **Goal for this session:** Build the first usable SlopeSwap prototype and replace the template's sample product with a ski and snowboard marketplace.
-- **Key prompts we gave Copilot** (paste the important ones):
+### Session — 2026-11-25 afternoon — started and changed a lot
+
+- **Goal for this session:** I built the first usable SlopeSwap prototype and replaced the template's sample product with a ski and snowboard marketplace.
+- **Key prompts I gave Copilot** (important prompts from this work period):
   1. "Create a startup for buying and selling used ski gear, with realistic fake listings and separate buyer and seller flows."
   2. "Add search, category and audience filters, saved listings, demo account gating, seller insights and listing submission."
-- **What worked:** The shared fake listing data in `data.js` gave the prototype a consistent product catalog. The browser-only account, save and listing flows made the major journeys interactive without real services.
-- **What broke, and how we fixed it:** The prototype needed multiple connected states rather than isolated pages. We kept the work in plain HTML, CSS and JavaScript and used the existing hash-based views plus browser `localStorage` to preserve demo state.
+- **What worked:** The shared fake listing data in `data.js` gave the prototype a consistent product catalog. My browser-only account, save and listing flows made the major journeys interactive without real services.
+- **What broke, and how I fixed it:** The prototype needed multiple connected states rather than isolated pages. I kept the work in plain HTML, CSS and JavaScript and used the existing hash-based views plus browser `localStorage` to preserve demo state.
 - **Committed?** yes — commit message: "started and changed a lot"
 
-### Session — 2026-11-26 — driver: project team
+### Session — 2026-11-25 night — finished website
 
-- **Goal for this session:** Finish the prototype, verify the project documentation and prepare the concept for final submission.
-- **Key prompts we gave Copilot** (paste the important ones):
-  1. "Review the actual SlopeSwap prototype and fill the project log using its implemented buyer, seller and network-effect features."
-  2. "Fill the business case with course concepts, a realistic revenue model, launch strategy, moat, cloud operations and ethics risks."
-- **What worked:** The finished page includes shop filtering, saved gear, account-gated purchase requests, seller listings, market insights, photo previews and a seller dashboard.
-- **What broke, and how we fixed it:** The fake account and payment flows could appear more real than they are, so the documentation records that they are browser-local demos and describes the real services a production version would need.
+- **Goal for this session:** I finished the prototype and prepared the concept for final submission.
+- **Key prompts I gave Copilot** (important prompts from this work period):
+  1. "Make listings submitted on the Sell page also appear in the Shop"
+  2. "Add a stats bar showing active sellers, buyers and listings"
+  3. "Create boots and accessories SVGs and use them for the right listings"
+  4. "Show a message when a signed-out user submits the Sell form"
+  5. "Add a Menu button on screens under 600px"
+  6. "Add seller ratings to listing cards"
+  7. "Add a Market insights panel on the Sell page"
+  8. "Add How to buy and How to sell steps on the home page"
+- **What worked:** I completed the shop filtering, saved gear, account-gated purchase requests, seller listings, market insights, photo previews and seller dashboard.
+- **What broke, and how I fixed it:** The fake account and payment flows could appear more real than they are, so I documented that they are browser-local demos and described the real services a production version would need.
 - **Committed?** yes — commit message: "finished website"
 
-### Session — 2026-11-26 — website review and final copy update
+### Session — 2026-11-26 — project log
 
-- **Goal for this session:** Double-check the existing SlopeSwap prototype, remove no-longer-wanted styling experiments, and update the founding-seller offer.
-- **Key prompts we gave Copilot** (paste the important ones):
-  4. "change Founding sellers — No fees on your first 3 sales to after 3 sales 1 month free membership"
-  5. "double check everything ive given you"
-  6. "check all the previous work done on this website"
-- **What worked:** The website audit confirmed that the HTML, JavaScript, CSS, assets and project documentation were consistent. The temporary home-page background experiments were undone, and the founding-seller banner was updated without changing other page styling or functionality.
-- **What broke, and how we fixed it:** The earlier background changes did not match the intended scope, so they were restored to the original styles and routing behavior. The final implementation is a one-line copy update in the sell-view banner.
-- **Committed?** not yet — the founding-seller copy change is an uncommitted working-tree edit.
+- **Goal for this session:** I organized the project log and began documenting the prototype's work sessions and implementation details.
+- **Key prompts I gave Copilot** (important prompts from this work period):
+  1. "Review the actual SlopeSwap prototype and fill the project log using its implemented buyer, seller and network-effect features."
+- **What worked:** I added a readable summary of the website changes and began keeping the project session information in `PROJECT_LOG.md`.
+- **What broke, and how I fixed it:** Reconstructing the work from the finished prototype could lose detail, so I used the commit history and existing implementation to record the major features and outcomes.
+- **Committed?** yes — commit message: "project log"
+
+### Session — 2026-11-26 — edited project log
+
+- **Goal for this session:** I reviewed and updated the project log after the first documentation pass.
+- **Key prompts I gave Copilot** (important prompts from this work period):
+  1. "Update the project logs with the session and the previous commits."
+- **What worked:** I refined the project log's session history and made the commit history and work periods easier to follow.
+- **What broke, and how I fixed it:** The earlier session information needed to match the actual Git work periods more closely, so I revised the log to separate the documentation updates and implementation periods.
+- **Committed?** yes — commit message: "edited project log"
+
+### Session — 2026-11-26 — worked some more
+
+- **Goal for this session:** I double-checked the existing SlopeSwap prototype and updated the founding-seller offer.
+- **Key prompts I gave Copilot** (important prompts from this work period):
+  1. "change Founding sellers — No fees on your first 3 sales to after 3 sales 1 month free membership"
+  2. "double check everything ive given you"
+  3. "check all the previous work done on this website"
+- **What worked:** I audited the full website, confirmed that the core files and assets were consistent, and changed the banner to "After 3 sales: 1 month free membership."
+- **What broke, and how I fixed it:** I also removed temporary home-page background experiments that did not belong in the final site, preserving the original styling and routing behavior.
+- **Committed?** yes — worked some more
 
 ## Previous commits
 
@@ -74,6 +104,7 @@ Copy this block for each session.
 | `03091e6` | Finished the website: expanded listings and app behavior, seller and account flows, market insights, responsive styling and documentation. |
 | `8c64b39` | Added the project log. |
 | `460b979` | Edited the project log. |
+| `254b9e6` | Worked some more: audited the website, fixed final copy and removed temporary background experiments. |
 
 ---
 
@@ -81,9 +112,10 @@ Copy this block for each session.
 
 | Date | What went wrong | What we tried | What finally fixed it |
 |---|---|---|---|
-| 2026-11-25 | The prototype needs consistent data for the shop and market-insight calculations. | We separated startup and listing data from the interaction code. | Keeping all example listings in `data.js` and adding `getBrowseListings()` made newly submitted listings appear in both views. |
-| 2026-11-25 | Listing, saved-item and account actions must not share real user data. | We avoided real authentication and payment services. | Browser `localStorage` now demonstrates account, saved-listing and purchase-request state for the current browser only. |
-| 2026-11-26 | A demo photo scan could be mistaken for a real safety or authenticity inspection. | We described the scan in the UI as an estimate. | The interface labels the score as a demo based on photo count, resolution and condition, not hidden damage or authenticity. |
+| 2026-11-25 | The boot, pole and goggle listings showed the helmet picture. | We checked which listings used `protection.svg`. | Copilot created separate SVGs for each item and used the correct picture for each listing. |
+| 2026-11-26 | The Sell form did nothing when a signed-out user submitted it. | We tested it and found that it silently stopped. | We added a message and a redirect to Create account, then returned the user to the listing. |
+| 2026-11-26 | On a phone, the nav wrapped to two lines and "Create account" split in half. | We tried shrinking the text. | We added a Menu button for screens under 600px. |
+| 2026-11-26 | A home-page background change did not match what I wanted. | We tried adjusting it. | We undid the change and restored the original styles. |
 
 ## What a real version would need
 
@@ -109,3 +141,7 @@ Everything we wanted but faked or left out — real logins, a real database, pay
    Content, layouts and repetitive components were relatively easy because an AI assistant could apply one pattern across the page. The harder part was coordinating multiple states, such as saving an item, submitting a seller listing, gating an action behind an account or preventing a repeat purchase request. Those behaviors require careful rules and testing, not only polished text or styling.
 3. If a competitor had the same AI tool, how long would it take them to copy your site?
    A competitor could copy the visible design and straightforward client-side interactions in a few hours to a few days. However, copying the useful company would take much longer: a trustworthy inventory, working seller and buyer network, condition processes, payment and shipping operations, and a recognized brand could take roughly one to three years to establish.
+
+### Business lesson
+
+I learned that AI made the website nearly free to build and copy: for example, Copilot added 18 realistic listings in minutes, while getting the sign-in rules right took several tries. SlopeSwap's real advantage would not be its code, but its buyer and seller network, trusted condition checks and reliable operations.
