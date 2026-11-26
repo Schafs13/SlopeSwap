@@ -160,6 +160,7 @@
 | `9a6383d` | Restored the chronological Nov 26 sessions, business-case prompts and detailed breakage table. |
 | `d18e725` | Finalized and reconciled the project log, including the session structure and commit-history details. |
 | `b626658` | Applied the rubric fixes to revenue, cold start, VRIN, cloud operations and the live project log. |
+| `dac773e` | Recorded the rubric-fix commit hash in the live project-log session. |
 
 ## Things that broke
 
