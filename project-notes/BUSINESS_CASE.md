@@ -117,4 +117,4 @@ The prototype demonstrates search, saves, account gating and seller status, not 
 
 SlopeSwap addresses gear-search and trust problems, but viability depends on safe operations and positive transaction economics. Start locally and validate demand, willingness to pay and repeat use. Defensibility rests on operations and data, not code.
 
-AI use: Copilot edited from my prompts; Claude gave feedback against the rubric.
+
