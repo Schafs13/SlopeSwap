@@ -1,5 +1,9 @@
 # Business case
 
+- **Startup:** SlopeSwap
+- **Repository:** https://github.com/Schafs13/SlopeSwap
+- **Prototype:** https://schafs13.github.io/SlopeSwap/
+
 Your prototype shows what the product looks like. This document explains why it could become a business. Refer to course concepts by name.
 
 ## 1. The idea

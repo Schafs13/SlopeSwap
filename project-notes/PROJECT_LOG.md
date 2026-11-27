@@ -2,7 +2,8 @@
 
 **Team name:** Schafs13
 **Startup name:** SlopeSwap
-**Live site link:** https://schafs13.github.io/ai-to-startup-template/
+**Repository:** https://github.com/Schafs13/SlopeSwap
+**Live site link:** https://schafs13.github.io/SlopeSwap/
 
 ## Work sessions
 
